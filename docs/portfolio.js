@@ -6,7 +6,27 @@ const ua=navigator.userAgent;const device=/Android/i.test(ua)?'google':(/iPad|iP
 document.querySelectorAll('.download-link[data-store]').forEach(a=>{if(device&&a.dataset.store===device){a.classList.add('recommended');a.setAttribute('aria-label',a.textContent+'，適合目前裝置')}});
 document.querySelectorAll('.device-note').forEach(p=>{const section=p.closest('section')||document;const matching=section.querySelector('[data-store="'+device+'"]');p.textContent=device?(matching?'已突出顯示適合你裝置的商店入口。':'此作品暫未列出適合目前裝置的平台；請查看商店支援資訊。'):'使用電腦？可掃描下方 QR Code，在手機開啟對應商店。'});
 let platform='all',category='all',visibleLimit=12;const search=document.getElementById('app-search');
-function update(){if(!search)return;const q=search.value.trim().toLocaleLowerCase();const matches=[];document.querySelectorAll('.real-card').forEach(c=>{const match=(platform==='all'||c.dataset.platform.split(' ').includes(platform))&&(category==='all'||c.dataset.category===category)&&(c.dataset.name+' '+c.dataset.category).toLocaleLowerCase().includes(q);c.hidden=true;if(match)matches.push(c)});matches.slice(0,visibleLimit).forEach(c=>c.hidden=false);document.getElementById('app-count').textContent=matches.length+' 個作品';document.getElementById('empty-apps').hidden=matches.length!==0;const more=document.getElementById('load-more');if(more){more.hidden=matches.length<=visibleLimit;more.textContent='顯示更多 App（還有 '+Math.max(0,matches.length-visibleLimit)+' 個）↓'}}
+let recentTop10Ids=new Set(),recentLoaded=false;
+function update(){
+ if(!search)return;
+ const q=search.value.trim().toLocaleLowerCase(),recent=category==='recent-top10',matches=[];
+ const cards=[...document.querySelectorAll('.real-card')];
+ cards.forEach(c=>{
+  const id=c.querySelector('a[href*="apps/app-"]')?.getAttribute('href')?.match(/app-[0-9]+/)?.[0];
+  const ok=(platform==='all'||c.dataset.platform.split(' ').includes(platform))&&(recent?recentTop10Ids.has(id):(category==='all'||c.dataset.category===category))&&(c.dataset.name+' '+c.dataset.category).toLocaleLowerCase().includes(q);
+  c.hidden=true;c.style.order='';if(ok)matches.push(c);
+ });
+ if(recent)matches.sort((a,b)=>Number(a.dataset.appleUpdateRank||999)-Number(b.dataset.appleUpdateRank||999));
+ matches.forEach((c,i)=>{if(recent)c.style.order=String(i)});
+ const limit=recent?10:visibleLimit;
+ matches.slice(0,limit).forEach(c=>c.hidden=false);
+ const counter=document.getElementById('app-count');
+ if(counter)counter.textContent=recent?matches.length+' 個最近更新作品':matches.length+' 個作品';
+ const empty=document.getElementById('empty-apps');
+ if(empty){empty.hidden=matches.length!==0;empty.textContent=recent&&!recentLoaded?'正在讀取 Apple App Store 更新日期…':recent?'暫未能取得符合條件的 Apple App Store 作品。':'未找到符合的作品，試試其他名稱或平台。'}
+ const more=document.getElementById('load-more');
+ if(more){more.hidden=recent||matches.length<=visibleLimit;more.textContent='顯示更多 App（還有 '+Math.max(0,matches.length-visibleLimit)+' 個）↓'}
+}
 function bindFilters(attribute,set){const bs=document.querySelectorAll('['+attribute+']');bs.forEach(b=>b.addEventListener('click',()=>{visibleLimit=12;set(b.getAttribute(attribute));bs.forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b))});update()}))}
 bindFilters('data-platform-filter',v=>platform=v);bindFilters('data-category-filter',v=>category=v);if(search)search.addEventListener('input',()=>{visibleLimit=12;update()});const more=document.getElementById('load-more');if(more)more.addEventListener('click',()=>{visibleLimit+=12;update()});update();
 const share=document.getElementById('share-app');if(share)share.addEventListener('click',async()=>{const status=document.getElementById('share-status');try{await navigator.clipboard.writeText(location.href);status.textContent='已複製作品連結。'}catch{status.textContent='可複製瀏覽器網址列分享此作品。'}});
@@ -94,6 +114,7 @@ else{const frame=document.createElement('iframe');frame.src='https://www.youtube
   for(let n=0;n<ids.length;n+=25)results.push(...await fetchBatch(ids.slice(n,n+25)));
   applyArtwork(results);
   syncAppleStoreCategories(results);
+  syncAppleRecentTop10(results);
 })();
 
 
@@ -119,7 +140,7 @@ function syncAppleStoreCategories(results){
      const values=[...new Set([...document.querySelectorAll('.real-card')].map(c=>c.dataset.category).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'zh-Hant'));
      // Existing filter listeners are attached to old buttons; provide equivalent listeners on replacements.
      bar.replaceChildren();
-     for(const name of ['all',...values]){const b=document.createElement('button');b.type='button';b.dataset.categoryFilter=name;b.textContent=name==='all'?'所有分類':name;b.className=name==='all'?'active':'';b.setAttribute('aria-pressed',String(name==='all'));b.addEventListener('click',()=>{category=name;visibleLimit=12;bar.querySelectorAll('button').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b))});update()});bar.append(b)}
+     for(const name of ['all','recent-top10',...values]){const b=document.createElement('button');b.type='button';b.dataset.categoryFilter=name;b.textContent=name==='all'?'所有分類':name==='recent-top10'?'🆕 最近更新 Top 10':name;if(name==='recent-top10')b.classList.add('recent-top10-btn');b.className=name==='all'?'active':'';b.setAttribute('aria-pressed',String(name==='all'));b.addEventListener('click',()=>{category=name;visibleLimit=12;bar.querySelectorAll('button').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b))});update()});bar.append(b)}
    }
    category='all';visibleLimit=12;update();
    const note=document.querySelector('.catalog-note .note');if(note)note.append(' 分類以 Apple App Store 官方資料為優先；Apple 分類不可取得或只有 Android 版本時保留原有分類。');
@@ -188,3 +209,19 @@ function syncAppleStoreCategories(results){
   }
  }catch(e){console.warn('Media priority fallback',e)}
 })();
+
+/** Ranked only by the Apple App Store's currentVersionReleaseDate, not catalog edits. */
+function syncAppleRecentTop10(results){
+ const dates=new Map(results.filter(r=>r.trackId&&r.currentVersionReleaseDate&&!Number.isNaN(Date.parse(r.currentVersionReleaseDate)))
+  .map(r=>[String(r.trackId),Date.parse(r.currentVersionReleaseDate)]));
+ fetch(new URL('apps.json',portfolioBaseUrl)).then(r=>r.ok?r.json():[]).then(apps=>{
+  const ranked=apps.map(a=>({app:a,id:(a.links?.apple||'').match(/\/id([0-9]+)/)?.[1]}))
+   .filter(x=>x.id&&dates.has(x.id))
+   .sort((a,b)=>dates.get(b.id)-dates.get(a.id)||a.app.name.localeCompare(b.app.name,'zh-Hant'))
+   .slice(0,10);
+  recentTop10Ids=new Set(ranked.map(x=>x.app.id));recentLoaded=true;
+  const cards=[...document.querySelectorAll('.real-card')];
+  ranked.forEach((x,i)=>{const card=cards.find(c=>c.querySelector('a[href*="apps/app-"]')?.getAttribute('href')?.includes(x.app.id+'.html'));if(card){card.dataset.appleUpdateRank=String(i+1);card.dataset.appleUpdated=new Date(dates.get(x.id)).toISOString().slice(0,10)}});
+  if(category==='recent-top10')update();
+ }).catch(()=>{recentLoaded=true;if(category==='recent-top10')update()});
+}
