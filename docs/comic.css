@@ -13,3 +13,9 @@
 
 /* Fast direct link to each Apple App Store listing. */
 .real-card .appstore-shortcut{display:inline-flex;align-items:center;justify-content:center;gap:9px;width:fit-content;max-width:100%;margin-top:13px;padding:9px 13px;border:2px solid var(--ink);border-radius:10px;background:#163e32;color:#fff;font-size:12px;font-weight:750;text-decoration:none;box-shadow:2px 2px 0 #91af9e;transition:transform .15s,box-shadow .15s}.real-card .appstore-shortcut:hover{transform:translateY(-2px);box-shadow:3px 4px 0 #91af9e}.real-card .appstore-shortcut:focus-visible{outline:3px solid #c78826;outline-offset:3px}.appstore-symbol{display:grid;place-items:center;width:23px;height:23px;border-radius:7px;background:#fff;color:#163e32;font-size:18px;font-family:Arial,sans-serif;font-weight:900;line-height:1}.real-card .appstore-shortcut span:last-child{white-space:nowrap}
+
+/* Keep download shortcut visually secondary to the App artwork. */
+.real-card .appstore-shortcut{margin-top:9px;padding:5px 9px;gap:6px;font-size:10px;font-weight:650;border-width:1px;border-radius:7px;background:#edf5ee;color:#214538;box-shadow:none;line-height:1.3;min-height:28px}
+.real-card .appstore-shortcut:hover{background:#dcece0;box-shadow:none;transform:none}
+.real-card .appstore-shortcut .appstore-symbol{width:17px;height:17px;border-radius:5px;background:#214538;color:#fff;font-size:12px}
+.real-card .appstore-shortcut:focus-visible{outline:2px solid #24765d;outline-offset:2px}
