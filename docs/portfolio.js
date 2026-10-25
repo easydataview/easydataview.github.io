@@ -5,30 +5,45 @@ const year=document.getElementById('year');if(year)year.textContent=new Date().g
 const ua=navigator.userAgent;const device=/Android/i.test(ua)?'google':(/iPad|iPhone|iPod/i.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1))?'apple':null;
 document.querySelectorAll('.download-link[data-store]').forEach(a=>{if(device&&a.dataset.store===device){a.classList.add('recommended');a.setAttribute('aria-label',a.textContent+'，適合目前裝置')}});
 document.querySelectorAll('.device-note').forEach(p=>{const section=p.closest('section')||document;const matching=section.querySelector('[data-store="'+device+'"]');p.textContent=device?(matching?'已突出顯示適合你裝置的商店入口。':'此作品暫未列出適合目前裝置的平台；請查看商店支援資訊。'):'使用電腦？可掃描下方 QR Code，在手機開啟對應商店。'});
-let platform='all',category='all',visibleLimit=12;const search=document.getElementById('app-search');
-let recentTop10Ids=new Set(),recentLoaded=false;
+let platform='all',category='all',visibleLimit=12;
+const search=document.getElementById('app-search');
+const categoryNames=['趣味遊戲','語言與兒童學習','閱讀與文學','命理與傳統文化','實用工具','文字與影像工具','生活與健康','考試與知識'];
+let catalog=[],recentTop10Ids=new Set(),recentLoaded=false;
 function update(){
  if(!search)return;
- const q=search.value.trim().toLocaleLowerCase(),recent=category==='recent-top10',matches=[];
- const cards=[...document.querySelectorAll('.real-card')];
- cards.forEach(c=>{
-  const id=c.querySelector('a[href*="apps/app-"]')?.getAttribute('href')?.match(/app-[0-9]+/)?.[0];
-  const ok=(platform==='all'||c.dataset.platform.split(' ').includes(platform))&&(recent?recentTop10Ids.has(id):(category==='all'||c.dataset.category===category))&&(c.dataset.name+' '+c.dataset.category+' '+(c.querySelector('p')?.textContent||'')).toLocaleLowerCase().includes(q);
-  c.hidden=true;c.style.order='';if(ok)matches.push(c);
+ const query=search.value.trim().toLocaleLowerCase();
+ const recent=category==='recent-top10';
+ let matches=[...document.querySelectorAll('.real-card')].filter(card=>{
+  const app=catalog.find(a=>a.id===card.dataset.appId);
+  const keywords=[app?.name,app?.description,app?.category,app?.searchKeywords,card.dataset.name,card.dataset.category].filter(Boolean).join(' ').toLocaleLowerCase();
+  return (platform==='all'||card.dataset.platform.split(' ').includes(platform))
+   &&(recent?recentTop10Ids.has(card.dataset.appId):category==='all'||app?.category===category)
+   &&(!query||keywords.includes(query));
  });
  if(recent)matches.sort((a,b)=>Number(a.dataset.appleUpdateRank||999)-Number(b.dataset.appleUpdateRank||999));
- matches.forEach((c,i)=>{if(recent)c.style.order=String(i)});
- const limit=recent?10:visibleLimit;
- matches.slice(0,limit).forEach(c=>c.hidden=false);
- const counter=document.getElementById('app-count');
- if(counter)counter.textContent=recent?matches.length+' 個最近更新作品':matches.length+' 個作品';
+ const visible=new Set(matches.slice(0,recent?10:visibleLimit));
+ document.querySelectorAll('.real-card').forEach(card=>{card.hidden=!visible.has(card);card.style.order=recent&&visible.has(card)?String(matches.indexOf(card)):''});
+ const counter=document.getElementById('app-count');if(counter)counter.textContent=(recent?matches.length:matches.length)+' 個作品';
  const empty=document.getElementById('empty-apps');
- if(empty){empty.hidden=matches.length!==0;empty.textContent=recent&&!recentLoaded?'正在讀取 Apple App Store 更新日期…':recent?'暫未能取得符合條件的 Apple App Store 作品。':'未找到符合的作品，試試其他名稱或平台。'}
+ if(empty){empty.hidden=matches.length>0||recent&&!recentLoaded;empty.textContent=recent?'沒有可顯示的 Apple App Store 更新資料。':'沒有符合搜尋條件的 App。'}
  const more=document.getElementById('load-more');
  if(more){more.hidden=recent||matches.length<=visibleLimit;more.textContent='顯示更多 App（還有 '+Math.max(0,matches.length-visibleLimit)+' 個）↓'}
 }
-function bindFilters(attribute,set){const bs=document.querySelectorAll('['+attribute+']');bs.forEach(b=>b.addEventListener('click',()=>{visibleLimit=12;set(b.getAttribute(attribute));bs.forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b))});update()}))}
-bindFilters('data-platform-filter',v=>platform=v);bindFilters('data-category-filter',v=>category=v);if(search)search.addEventListener('input',()=>{visibleLimit=12;update()});const more=document.getElementById('load-more');if(more)more.addEventListener('click',()=>{visibleLimit+=12;update()});update();
+function setCategory(next){category=next;visibleLimit=12;document.querySelectorAll('[data-category-filter]').forEach(b=>{const active=b.dataset.categoryFilter===next;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active))});update()}
+function bindCatalog(){
+ const bar=document.querySelector('.category-bar');
+ if(bar){bar.replaceChildren();for(const [value,label] of [['all','所有分類'],['recent-top10','🆕 最近更新 Top 10'],...categoryNames.map(n=>[n,n])]){
+ const b=document.createElement('button');b.type='button';b.dataset.categoryFilter=value;b.textContent=label;if(value==='recent-top10')b.classList.add('recent-top10-btn');b.addEventListener('click',()=>setCategory(value));bar.append(b)}}
+ document.querySelectorAll('.real-card').forEach(card=>{card.dataset.appId=card.querySelector('a[href*="apps/app-"]')?.getAttribute('href')?.match(/app-[0-9]+/)?.[0]||''});
+ setCategory('all');
+}
+document.querySelectorAll('[data-platform-filter]').forEach(button=>button.addEventListener('click',()=>{platform=button.dataset.platformFilter;visibleLimit=12;document.querySelectorAll('[data-platform-filter]').forEach(b=>{b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',String(b===button))});update()}));
+if(search)search.addEventListener('input',()=>{visibleLimit=12;update()});
+document.getElementById('load-more')?.addEventListener('click',()=>{visibleLimit+=12;update()});
+if(search){
+ bindCatalog();
+ fetch(new URL('apps.json',portfolioBaseUrl)).then(r=>{if(!r.ok)throw Error('Catalog unavailable');return r.json()}).then(apps=>{catalog=apps;update()}).catch(error=>console.warn('Catalog fallback',error));
+}
 const share=document.getElementById('share-app');if(share)share.addEventListener('click',async()=>{const status=document.getElementById('share-status');try{await navigator.clipboard.writeText(location.href);status.textContent='已複製作品連結。'}catch{status.textContent='可複製瀏覽器網址列分享此作品。'}});
 // No analytics requests are made without a configured service and visitor consent.
 const id=window.PORTFOLIO_ANALYTICS?.measurementId;if(/^G-[A-Z0-9]+$/.test(id||'')){const box=document.createElement('div');box.style.cssText='position:fixed;bottom:15px;left:15px;right:15px;background:#163e32;color:white;padding:18px;border-radius:16px;z-index:20';box.textContent='允許匿名瀏覽與下載點擊統計，協助改善網站？ ';const yes=document.createElement('button'),no=document.createElement('button');yes.textContent='允許';no.textContent='暫不';box.append(yes,no);document.body.append(box);no.onclick=()=>box.remove();yes.onclick=()=>{window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config',id,{send_page_view:true});const tag=document.createElement('script');tag.src='https://www.googletagmanager.com/gtag/js?id='+id;tag.async=true;document.head.append(tag);box.remove();document.querySelectorAll('.download-link[data-store]').forEach(a=>a.addEventListener('click',()=>gtag('event','store_click',{app_name:a.dataset.app,store:a.dataset.store,transport_type:'beacon'})))}}
@@ -126,41 +141,12 @@ else{const frame=document.createElement('iframe');frame.src='https://www.youtube
   const results=[];
   for(let n=0;n<ids.length;n+=25)results.push(...await fetchBatch(ids.slice(n,n+25)));
   applyArtwork(results);
-  syncAppleStoreCategories(results);
+  // Official App Store genre remains metadata; the visitor filters use purpose-based categories.
   syncAppleRecentTop10(results);
 })();
 
 
 // Apple App Store is the classification authority for every iOS app where official metadata is available.
-function syncAppleStoreCategories(results){
- const genreMap=new Map(results.filter(r=>r.trackId&&r.primaryGenreName).map(r=>[String(r.trackId),r.primaryGenreName]));
- fetch(new URL('apps.json',portfolioBaseUrl)).then(r=>r.ok?r.json():[]).then(apps=>{
-  const byId=new Map(apps.map(a=>[a.id,a]));
-  let official=0;
-  document.querySelectorAll('.real-card').forEach(card=>{
-    const appId=card.querySelector('a[href*="apps/app-"]')?.getAttribute('href')?.match(/app-[0-9]+/)?.[0];
-    const app=byId.get(appId);
-    const appleId=(app?.links?.apple||'').match(/\/id([0-9]+)/)?.[1];
-    const genre=genreMap.get(appleId);
-    if(genre){card.dataset.category=genre;card.dataset.categorySource='apple';official++;}
-  });
-  if(!official)return;
-  const bar=document.querySelector('.category-bar');if(!bar)return;
-  const selected=category;
-  const values=[...new Set([...document.querySelectorAll('.real-card')].map(c=>c.dataset.category).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'zh-Hant'));
-  bar.replaceChildren();
-  for(const name of ['all','recent-top10',...values]){
-   const b=document.createElement('button');b.type='button';b.dataset.categoryFilter=name;
-   b.textContent=name==='all'?'所有分類':name==='recent-top10'?'🆕 最近更新 Top 10':name;
-   if(name==='recent-top10')b.classList.add('recent-top10-btn');
-   b.classList.toggle('active',name===selected);b.setAttribute('aria-pressed',String(name===selected));
-   b.addEventListener('click',()=>{category=name;visibleLimit=12;bar.querySelectorAll('button').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b))});update()});bar.append(b);
-  }
-  if(selected!=='all'&&selected!=='recent-top10'&&!values.includes(selected))category='all';
-  update();
- }).catch(e=>console.warn('Category fallback',e));
-}
-
 // Prefer App Store preview video and screenshots. Google Play remains a fallback for Android-only apps.
 // YouTube demos are supplementary, never substituted for official store preview videos.
 (async function preferStoreMedia(){
