@@ -25,3 +25,72 @@ else{const frame=document.createElement('iframe');frame.src='https://www.youtube
 
 // Prioritize the most recently updated apps; retain search, category filters and pagination.
 (async function sortByUpdatedAppDate(){const grid=document.querySelector('.catalog-grid');if(!grid)return;try{const response=await fetch(new URL('apps.json',portfolioBaseUrl));if(!response.ok)return;const apps=await response.json();const dates=new Map(apps.map(a=>[a.id,a.updated||'']));const cards=[...grid.querySelectorAll('.real-card')];for(const c of cards){const match=c.querySelector('a[href*="apps/app-"]')?.getAttribute('href')?.match(/app-\d+/);c.dataset.updated=match?dates.get(match[0])||'':'';}cards.sort((a,b)=>b.dataset.updated.localeCompare(a.dataset.updated));cards.forEach((c,i)=>{grid.append(c);if(i<3&&c.dataset.updated){const badge=document.createElement('span');badge.className='recent-label';badge.textContent='最近更新';c.append(badge)}});update();}catch(e){console.warn('Catalog fallback ordering',e)}})();
+
+// Prefer official Apple App Store icons for works with an Apple listing.
+// Query Apple's public iTunes Lookup API at run-time; retain local image as offline fallback.
+(async function hydrateOfficialAppleIcons(){
+  const isDetail=/\/apps\/app-\d+\.html$/i.test(location.pathname);
+  const indexUrl=new URL('apps.json',portfolioBaseUrl);
+  let catalog;
+  try{
+    const response=await fetch(indexUrl);
+    if(!response.ok)return;
+    catalog=await response.json();
+  }catch{return}
+  const entries=catalog.map(a=>{
+    const match=(a.links?.apple||'').match(/\/id(\d+)/);
+    return match?{app:a,storeId:match[1]}:null;
+  }).filter(Boolean);
+  if(!entries.length)return;
+  const ids=[...new Set(entries.map(e=>e.storeId))];
+  function applyArtwork(results){
+    const artwork=new Map(results.filter(x=>x.trackId&&x.artworkUrl512).map(x=>[String(x.trackId),x.artworkUrl512]));
+    for(const {app,storeId} of entries){
+      const url=artwork.get(storeId);
+      if(!url || !url.startsWith('https://'))continue;
+      // App Store assets are only assigned after official lookup returns the matching track ID.
+      const targets=[];
+      document.querySelectorAll('article.real-card').forEach(card=>{
+        const link=card.querySelector('a[href*="apps/app-"]');
+        if(link?.getAttribute('href')?.includes(app.id+'.html'))targets.push(...card.querySelectorAll('.compact-top img,.new-app-icon'));
+      });
+      if(isDetail && location.pathname.endsWith('/'+app.id+'.html')){
+        targets.push(...document.querySelectorAll('.detail-hero img'));
+        targets.push(...document.querySelectorAll('.detail-emblem'));
+      }
+      for(const element of targets){
+        const img=element.tagName==='IMG'?element:document.createElement('img');
+        if(img!==element){img.width=58;img.height=58;img.alt=app.name+' Apple App Store 圖示';element.replaceWith(img)}
+        const fallback=img.getAttribute('src');
+        img.onerror=()=>{img.onerror=null;if(fallback)img.src=fallback;else img.style.visibility='hidden'};
+        img.src=url;
+        img.alt=app.name+' — Apple App Store 官方圖示';
+        img.loading='lazy';
+      }
+    }
+  }
+  async function fetchBatch(batch){
+    const api='https://itunes.apple.com/lookup?country=hk&id='+batch.join(',');
+    try{
+      const r=await fetch(api);
+      if(!r.ok)throw Error('Apple lookup unavailable');
+      return (await r.json()).results||[];
+    }catch{
+      // Apple's lookup service also supports JSONP for restrictive browser CORS environments.
+      return await new Promise(resolve=>{
+        const callback='lamlamAppleIcons'+Math.random().toString(36).slice(2);
+        const script=document.createElement('script');
+        let resolved=false;
+        function finish(rows){if(resolved)return;resolved=true;delete window[callback];script.remove();resolve(rows||[])}
+        window[callback]=data=>finish(data?.results);
+        script.onerror=()=>finish([]);
+        script.src=api+'&callback='+callback;
+        document.head.append(script);
+        setTimeout(()=>finish([]),7500);
+      });
+    }
+  }
+  const results=[];
+  for(let n=0;n<ids.length;n+=25)results.push(...await fetchBatch(ids.slice(n,n+25)));
+  applyArtwork(results);
+})();
