@@ -6,3 +6,5 @@
 .category-bar{display:flex;flex-wrap:wrap;align-items:center}.category-bar button{white-space:nowrap}.real-card[data-category-source='apple']:before{background:var(--mint)}
 
 .category-bar .recent-top10-btn{background:#ffe38a;font-weight:800;border:2px solid var(--ink)}.category-bar .recent-top10-btn.active{background:var(--ink);color:#fff}.real-card[data-apple-update-rank]{scroll-margin-top:30px}
+
+.apple-icon-pending{background:#e8eee7!important;object-fit:contain!important}.apple-icon-pending:not([src]){font-size:0}.category-bar{align-items:center}.category-bar button.active{font-weight:800}.real-card:focus-within{outline:3px solid #237a61;outline-offset:3px}
