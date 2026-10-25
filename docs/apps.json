@@ -845,10 +845,10 @@
     "preview": "https://apptrailers.itunes.apple.com/itunes-assets/PurpleVideo221/v4/fd/08/4a/fd084aa8-fe26-5368-d062-8694b2c6e3c6/P1522349771_default.m3u8"
   },
   {
-    "name": "OCR Text",
-    "description": "以相機辨識文字，並作朗讀、編輯及翻譯。",
+    "name": "快識字",
+    "description": "拍照、照片或多頁 PDF 擷取文字，保留原稿排版，支援文字朗讀、編輯及分享。",
     "links": {
-      "apple": "https://apps.apple.com/hk/app/ocr-text/id1390231574?uo=4"
+      "apple": "https://apps.apple.com/hk/app/id1390231574"
     },
     "icon": "assets/app-45.png",
     "id": "app-46",
@@ -859,7 +859,7 @@
       "assets/app-46-screen-2.jpg"
     ],
     "version": "1.3",
-    "updated": "2018-06-27",
+    "updated": "2026-10-25",
     "releaseNotes": "版面優化",
     "video": {
       "title": "OCR Text - Recognize text 識別文字",
@@ -888,5 +888,18 @@
       "url": "https://www.youtube.com/shorts/BgeLqufjH3s"
     },
     "preview": "https://apptrailers.itunes.apple.com/itunes-assets/PurpleVideo211/v4/09/8b/ae/098bae89-4a1b-3c8a-45c3-443b96391c9c/P1520170397_default.m3u8"
+  },
+  {
+    "id": "app-48",
+    "name": "TimeMates・時差拍檔",
+    "description": "查看朋友與家人的當地時間，以漫畫世界地圖、分類顏色和時間分享卡輕鬆跨時區聯絡。",
+    "links": {
+      "apple": "https://apps.apple.com/hk/app/timemates/id1402091196"
+    },
+    "category": "生活工具",
+    "updated": "2026-10-25",
+    "version": "2.1",
+    "releaseNotes": "Layout and function improvements",
+    "screenshots": []
   }
 ]
