@@ -93,4 +93,35 @@ else{const frame=document.createElement('iframe');frame.src='https://www.youtube
   const results=[];
   for(let n=0;n<ids.length;n+=25)results.push(...await fetchBatch(ids.slice(n,n+25)));
   applyArtwork(results);
+  syncAppleStoreCategories(results);
 })();
+
+
+// Apple App Store is the classification authority for every iOS app where official metadata is available.
+function syncAppleStoreCategories(results){
+ const genres={6000:'商業',6001:'天氣',6002:'工具程式',6003:'旅遊',6004:'運動',6005:'社交網絡',6006:'參考',6007:'生產力工具',6008:'相片與影片',6009:'新聞',6010:'導航',6011:'音樂',6012:'生活風格',6013:'健康與健身',6014:'遊戲',6015:'財經',6016:'娛樂',6017:'教育',6018:'書籍',6020:'醫療',6021:'雜誌與報紙',6023:'美食佳飲',6024:'購物',6026:'開發者工具',6027:'圖像與設計'};
+ const categories=new Map(results.filter(r=>r.trackId&&r.primaryGenreId).map(r=>[String(r.trackId),genres[Number(r.primaryGenreId)]||r.primaryGenreName]));
+ const appleApps=new Map();
+ document.querySelectorAll('.real-card').forEach(card=>{
+   const href=card.querySelector('a[href*="apps/app-"]')?.getAttribute('href')||'';
+   const appId=href.match(/app-\\d+/)?.[0];if(appId)appleApps.set(appId,card);
+ });
+ // Do not guess classifications for an unavailable App Store listing.
+ fetch(new URL('apps.json',portfolioBaseUrl)).then(r=>r.ok?r.json():[]).then(apps=>{
+   let official=0;
+   for(const app of apps){const id=(app.links?.apple||'').match(/\\/id(\\d+)/)?.[1];if(!id)continue;
+     const genre=categories.get(id),card=appleApps.get(app.id);if(!genre||!card)continue;
+     card.dataset.category=genre;card.dataset.categorySource='apple';official++;
+   }
+   if(!official)return;
+   const bar=document.querySelector('.category-bar');
+   if(bar){
+     const values=[...new Set([...document.querySelectorAll('.real-card')].map(c=>c.dataset.category).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'zh-Hant'));
+     // Existing filter listeners are attached to old buttons; provide equivalent listeners on replacements.
+     bar.replaceChildren();
+     for(const name of ['all',...values]){const b=document.createElement('button');b.type='button';b.dataset.categoryFilter=name;b.textContent=name==='all'?'所有分類':name;b.className=name==='all'?'active':'';b.setAttribute('aria-pressed',String(name==='all'));b.addEventListener('click',()=>{category=name;visibleLimit=12;bar.querySelectorAll('button').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b))});update()});bar.append(b)}
+   }
+   category='all';visibleLimit=12;update();
+   const note=document.querySelector('.catalog-note .note');if(note)note.append(' 分類以 Apple App Store 官方資料為優先；Apple 分類不可取得或只有 Android 版本時保留原有分類。');
+ }).catch(()=>{});
+}
