@@ -10,3 +10,6 @@
 .apple-icon-pending{background:#e8eee7!important;object-fit:contain!important}.apple-icon-pending:not([src]){font-size:0}.category-bar{align-items:center}.category-bar button.active{font-weight:800}.real-card:focus-within{outline:3px solid #237a61;outline-offset:3px}
 
 .category-bar{display:flex;flex-wrap:wrap;gap:9px}.category-bar button.active{background:#163e32;color:white}.category-bar .recent-top10-btn{background:#ffe38a}.category-bar .recent-top10-btn.active{background:#163e32;color:white}
+
+/* Fast direct link to each Apple App Store listing. */
+.real-card .appstore-shortcut{display:inline-flex;align-items:center;justify-content:center;gap:9px;width:fit-content;max-width:100%;margin-top:13px;padding:9px 13px;border:2px solid var(--ink);border-radius:10px;background:#163e32;color:#fff;font-size:12px;font-weight:750;text-decoration:none;box-shadow:2px 2px 0 #91af9e;transition:transform .15s,box-shadow .15s}.real-card .appstore-shortcut:hover{transform:translateY(-2px);box-shadow:3px 4px 0 #91af9e}.real-card .appstore-shortcut:focus-visible{outline:3px solid #c78826;outline-offset:3px}.appstore-symbol{display:grid;place-items:center;width:23px;height:23px;border-radius:7px;background:#fff;color:#163e32;font-size:18px;font-family:Arial,sans-serif;font-weight:900;line-height:1}.real-card .appstore-shortcut span:last-child{white-space:nowrap}
