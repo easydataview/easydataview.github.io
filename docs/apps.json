@@ -1,0 +1,892 @@
+[
+  {
+    "name": "腦筋急轉彎",
+    "description": "換個角度想答案，享受動腦的樂趣。",
+    "links": {
+      "google": "https://play.google.com/store/apps/details?id=ihl.brain",
+      "apple": "https://apps.apple.com/hk/app/%E8%85%A6%E7%AD%8B%E6%80%A5%E8%BD%89%E5%BD%8E/id1252261936?uo=4"
+    },
+    "icon": "assets/app-0.png",
+    "id": "app-1",
+    "category": "遊戲娛樂",
+    "screenshots": [
+      "assets/app-1-screen-0.jpg",
+      "assets/app-1-screen-1.jpg",
+      "assets/app-1-screen-2.jpg"
+    ],
+    "version": "2.3",
+    "updated": "2018-07-01",
+    "releaseNotes": "功能優化",
+    "video": {
+      "title": "腦筋急轉彎",
+      "url": "https://www.youtube.com/shorts/5F2bEUuXLg0"
+    }
+  },
+  {
+    "name": "歇後語",
+    "description": "以猜題方式認識歇後語，亦提供語音內容。",
+    "links": {
+      "google": "https://play.google.com/store/apps/details?id=ihl.behind",
+      "apple": "https://apps.apple.com/hk/app/%E6%AD%87%E5%BE%8C%E8%AA%9E/id1320595396?uo=4"
+    },
+    "icon": "assets/app-1.png",
+    "id": "app-2",
+    "category": "閱讀學習",
+    "screenshots": [
+      "assets/app-2-screen-0.jpg",
+      "assets/app-2-screen-1.jpg",
+      "assets/app-2-screen-2.jpg"
+    ],
+    "version": "1.4",
+    "updated": "2018-06-29",
+    "releaseNotes": "1. 版面優化\n2. 新增字體大小調控\n3. 新增語速調控"
+  },
+  {
+    "name": "英文名",
+    "description": "查看英文名字的含義，聆聽名字讀音。",
+    "links": {
+      "google": "https://play.google.com/store/apps/details?id=ihl.engname",
+      "apple": "https://apps.apple.com/hk/app/%E8%8B%B1%E6%96%87%E5%90%8D/id1260143919?uo=4"
+    },
+    "icon": "assets/app-2.png",
+    "id": "app-3",
+    "category": "閱讀學習",
+    "screenshots": [
+      "assets/app-3-screen-0.jpg",
+      "assets/app-3-screen-1.jpg",
+      "assets/app-3-screen-2.jpg"
+    ],
+    "version": "2.4",
+    "updated": "2022-10-13",
+    "releaseNotes": "更新至iOS 12",
+    "preview": "https://apptrailers.itunes.apple.com/itunes-assets/PurpleVideo122/v4/a0/5b/96/a05b962c-b2cc-a490-0ec0-b217d13d3c68/P488272936_default.m3u8"
+  },
+  {
+    "name": "家居風水",
+    "description": "瀏覽傳統家居風水主題的參考資料。",
+    "links": {
+      "google": "https://play.google.com/store/apps/details?id=ihl.fengshuihouse"
+    },
+    "icon": "assets/app-3.png",
+    "id": "app-4",
+    "category": "傳統文化",
+    "screenshots": [
+      "assets/app-4-screen-0.jpg",
+      "assets/app-4-screen-1.jpg",
+      "assets/app-4-screen-2.jpg"
+    ]
+  },
+  {
+    "name": "IQ題",
+    "description": "以語音及趣味問題，挑戰你的思考方式。",
+    "links": {
+      "google": "https://play.google.com/store/apps/details?id=ihl.iqt",
+      "apple": "https://apps.apple.com/hk/app/iq%E9%A1%8C/id1254945461?uo=4"
+    },
+    "icon": "assets/app-4.png",
+    "id": "app-5",
+    "category": "遊戲娛樂",
+    "screenshots": [
+      "assets/app-5-screen-0.jpg",
+      "assets/app-5-screen-1.jpg",
+      "assets/app-5-screen-2.jpg"
+    ],
+    "version": "1.6",
+    "updated": "2022-10-13",
+    "releaseNotes": "更新至iOS12"
+  },
+  {
+    "name": "魯班尺",
+    "description": "查閱魯班尺與丁蘭尺的傳統尺規資料。",
+    "links": {
+      "google": "https://play.google.com/store/apps/details?id=ihl.foruler"
+    },
+    "icon": "assets/app-5.png",
+    "id": "app-6",
+    "category": "傳統文化",
+    "screenshots": [
+      "assets/app-6-screen-0.jpg",
+      "assets/app-6-screen-1.jpg",
+      "assets/app-6-screen-2.jpg"
+    ]
+  },
+  {
+    "name": "地區時間",
+    "description": "查閱不同城市的時間與時差。",
+    "links": {
+      "google": "https://play.google.com/store/apps/details?id=ihl.locationtime",
+      "apple": "https://apps.apple.com/hk/app/%E5%9C%B0%E5%8D%80%E6%99%82%E9%96%93/id1402091196?uo=4"
+    },
+    "icon": "assets/app-6.png",
+    "id": "app-7",
+    "category": "生活工具",
+    "screenshots": [
+      "assets/app-7-screen-0.jpg",
+      "assets/app-7-screen-1.jpg",
+      "assets/app-7-screen-2.jpg"
+    ],
+    "version": "1.0",
+    "updated": "2018-07-25",
+    "releaseNotes": ""
+  },
+  {
+    "name": "摩斯密碼",
+    "description": "認識摩斯密碼，探索文字轉換與聲音。",
+    "links": {
+      "google": "https://play.google.com/store/apps/details?id=ihl.morse",
+      "apple": "https://apps.apple.com/hk/app/%E6%91%A9%E6%96%AF%E5%AF%86%E7%A2%BC/id1413834988?uo=4"
+    },
+    "icon": "assets/app-7.png",
+    "id": "app-8",
+    "category": "閱讀學習",
+    "screenshots": [
+      "assets/app-8-screen-0.jpg",
+      "assets/app-8-screen-1.jpg",
+      "assets/app-8-screen-2.jpg"
+    ],
+    "version": "1.1",
+    "updated": "2018-09-17",
+    "releaseNotes": "功能及版面修正",
+    "video": {
+      "title": "摩斯密碼 Morse Code",
+      "url": "https://www.youtube.com/watch?v=mVbRUqgBqn8"
+    }
+  },
+  {
+    "name": "支票易",
+    "description": "將數字轉換成英文，協助處理支票金額。",
+    "links": {
+      "google": "https://play.google.com/store/apps/details?id=ihl.easycheque"
+    },
+    "icon": "assets/app-8.png",
+    "id": "app-9",
+    "category": "生活工具",
+    "screenshots": [
+      "assets/app-9-screen-0.jpg",
+      "assets/app-9-screen-1.jpg",
+      "assets/app-9-screen-2.jpg"
+    ]
+  },
+  {
+    "name": "推背圖",
+    "description": "閱讀《推背圖》相關的傳統文化內容。",
+    "links": {
+      "google": "https://play.google.com/store/apps/details?id=ihl.pushback",
+      "apple": "https://apps.apple.com/hk/app/%E6%8E%A8%E8%83%8C%E5%9C%96/id1369946886?uo=4"
+    },
+    "icon": "assets/app-9.png",
+    "id": "app-10",
+    "category": "傳統文化",
+    "screenshots": [
+      "assets/app-10-screen-0.jpg",
+      "assets/app-10-screen-1.jpg",
+      "assets/app-10-screen-2.jpg"
+    ],
+    "version": "1.1",
+    "updated": "2018-06-12",
+    "releaseNotes": "版面及功能優化"
+  },
+  {
+    "name": "筆劃",
+    "description": "隨手查詢漢字筆劃。",
+    "links": {
+      "google": "https://play.google.com/store/apps/details?id=ihl.achar",
+      "apple": "https://apps.apple.com/hk/app/%E7%AD%86%E5%8A%83/id1320465851?uo=4"
+    },
+    "icon": "assets/app-10.png",
+    "id": "app-11",
+    "category": "閱讀學習",
+    "screenshots": [
+      "assets/app-11-screen-0.jpg",
+      "assets/app-11-screen-1.jpg",
+      "assets/app-11-screen-2.jpg"
+    ],
+    "version": "1.4",
+    "updated": "2018-08-16",
+    "releaseNotes": "功能優化"
+  },
+  {
+    "name": "抽獎",
+    "description": "自訂名單，隨機抽出選項。",
+    "links": {
+      "google": "https://play.google.com/store/apps/details?id=ihl.random",
+      "apple": "https://apps.apple.com/hk/app/%E6%8A%BD%E7%8D%8E/id1291944962?uo=4"
+    },
+    "icon": "assets/app-11.png",
+    "id": "app-12",
+    "category": "生活工具",
+    "screenshots": [
+      "assets/app-12-screen-0.jpg",
+      "assets/app-12-screen-1.jpg",
+      "assets/app-12-screen-2.jpg"
+    ],
+    "version": "1.6",
+    "updated": "2023-03-19",
+    "releaseNotes": "功能修正及優化"
+  },
+  {
+    "name": "食物相剋",
+    "description": "瀏覽傳統食材搭配說法的參考內容。",
+    "links": {
+      "google": "https://play.google.com/store/apps/details?id=ihl.food"
+    },
+    "icon": "assets/app-12.png",
+    "id": "app-13",
+    "category": "傳統文化",
+    "screenshots": [
+      "assets/app-13-screen-0.jpg",
+      "assets/app-13-screen-1.jpg",
+      "assets/app-13-screen-2.jpg"
+    ]
+  },
+  {
+    "name": "建築字典",
+    "description": "查閱建築行業用語，亦提供語音內容。",
+    "links": {
+      "google": "https://play.google.com/store/apps/details?id=ihl.constdict",
+      "apple": "https://apps.apple.com/hk/app/%E5%BB%BA%E7%AF%89%E5%AD%97%E5%85%B8/id1257308107?uo=4"
+    },
+    "icon": "assets/app-13.png",
+    "id": "app-14",
+    "category": "生活工具",
+    "screenshots": [
+      "assets/app-14-screen-0.jpg",
+      "assets/app-14-screen-1.jpg",
+      "assets/app-14-screen-2.jpg"
+    ],
+    "version": "1.5",
+    "updated": "2019-09-05",
+    "releaseNotes": "Fixed ad error"
+  },
+  {
+    "name": "道德經",
+    "description": "隨身閱讀道家經典《道德經》。",
+    "links": {
+      "google": "https://play.google.com/store/apps/details?id=ihl.daotak",
+      "apple": "https://apps.apple.com/hk/app/%E9%81%93%E5%BE%B7%E7%B6%93/id1323771739?uo=4"
+    },
+    "icon": "assets/app-14.png",
+    "id": "app-15",
+    "category": "閱讀學習",
+    "screenshots": [
+      "assets/app-15-screen-0.jpg",
+      "assets/app-15-screen-1.jpg",
+      "assets/app-15-screen-2.jpg"
+    ],
+    "version": "1.2",
+    "updated": "2018-07-01",
+    "releaseNotes": "1. 版面功能優化\n2. 新增語速調控\n3. 新增字體大小調控"
+  },
+  {
+    "name": "姓名算命",
+    "description": "瀏覽姓名主題的傳統文化內容。",
+    "links": {
+      "google": "https://play.google.com/store/apps/details?id=ihl.name"
+    },
+    "icon": "assets/app-15.png",
+    "id": "app-16",
+    "category": "傳統文化",
+    "screenshots": [
+      "assets/app-16-screen-0.jpg",
+      "assets/app-16-screen-1.jpg",
+      "assets/app-16-screen-2.jpg"
+    ]
+  },
+  {
+    "name": "唐詩三百首",
+    "description": "閱讀唐詩作品，並聆聽語音。",
+    "links": {
+      "google": "https://play.google.com/store/apps/details?id=ihl.tongs"
+    },
+    "icon": "assets/app-16.png",
+    "id": "app-17",
+    "category": "閱讀學習",
+    "screenshots": [
+      "assets/app-17-screen-0.jpg",
+      "assets/app-17-screen-1.jpg",
+      "assets/app-17-screen-2.jpg"
+    ]
+  },
+  {
+    "name": "孫子兵法",
+    "description": "閱讀兵法原文、解釋與語音內容。",
+    "links": {
+      "google": "https://play.google.com/store/apps/details?id=ihl.sunzi"
+    },
+    "icon": "assets/app-17.png",
+    "id": "app-18",
+    "category": "閱讀學習",
+    "screenshots": [
+      "assets/app-18-screen-0.jpg",
+      "assets/app-18-screen-1.jpg",
+      "assets/app-18-screen-2.jpg"
+    ]
+  },
+  {
+    "name": "搖骰",
+    "description": "用手機擲骰，為聚會增添趣味。",
+    "links": {
+      "google": "https://play.google.com/store/apps/details?id=ihl.drawdice",
+      "apple": "https://apps.apple.com/hk/app/%E6%90%96%E9%AA%B0/id1410738668?uo=4"
+    },
+    "icon": "assets/app-18.png",
+    "id": "app-19",
+    "category": "遊戲娛樂",
+    "screenshots": [
+      "assets/app-19-screen-0.jpg",
+      "assets/app-19-screen-1.jpg",
+      "assets/app-19-screen-2.jpg"
+    ],
+    "version": "1.0",
+    "updated": "2018-07-28",
+    "releaseNotes": ""
+  },
+  {
+    "name": "八字稱骨算命",
+    "description": "瀏覽袁天罡稱骨算命的傳統文化內容。",
+    "links": {
+      "google": "https://play.google.com/store/apps/details?id=ihl.fatecal"
+    },
+    "icon": "assets/app-19.png",
+    "id": "app-20",
+    "category": "傳統文化",
+    "screenshots": [
+      "assets/app-20-screen-0.jpg",
+      "assets/app-20-screen-1.jpg",
+      "assets/app-20-screen-2.jpg"
+    ]
+  },
+  {
+    "name": "基本法練習",
+    "description": "以題庫練習、搜尋及語音方式重溫相關內容。",
+    "links": {
+      "apple": "https://apps.apple.com/hk/app/%E5%9F%BA%E6%9C%AC%E6%B3%95%E7%B7%B4%E7%BF%92/id1260410048?uo=4"
+    },
+    "icon": "assets/app-20.png",
+    "id": "app-21",
+    "category": "閱讀學習",
+    "screenshots": [
+      "assets/app-21-screen-0.jpg",
+      "assets/app-21-screen-1.jpg",
+      "assets/app-21-screen-2.jpg"
+    ],
+    "version": "4.4",
+    "updated": "2026-10-14",
+    "releaseNotes": "版面優化",
+    "video": {
+      "title": "基本法練習 Basic Law",
+      "url": "https://www.youtube.com/watch?v=8O2DtzvaXmI"
+    }
+  },
+  {
+    "name": "八字稱骨",
+    "description": "瀏覽傳統稱骨命理的文化參考內容。",
+    "links": {
+      "apple": "https://apps.apple.com/hk/app/%E5%85%AB%E5%AD%97%E7%A8%B1%E9%AA%A8/id1318251036?uo=4"
+    },
+    "icon": "assets/app-21.png",
+    "id": "app-22",
+    "category": "傳統文化",
+    "screenshots": [
+      "assets/app-22-screen-0.jpg",
+      "assets/app-22-screen-1.jpg",
+      "assets/app-22-screen-2.jpg"
+    ],
+    "version": "3.0",
+    "updated": "2026-10-17",
+    "releaseNotes": "版面優化"
+  },
+  {
+    "name": "手機尺",
+    "description": "將手機化作隨身的尺規工具。",
+    "links": {
+      "apple": "https://apps.apple.com/hk/app/%E6%89%8B%E6%A9%9F%E5%B0%BA/id1425299804?uo=4"
+    },
+    "icon": "assets/app-22.png",
+    "id": "app-23",
+    "category": "生活工具",
+    "screenshots": [
+      "assets/app-23-screen-0.jpg",
+      "assets/app-23-screen-1.jpg",
+      "assets/app-23-screen-2.jpg"
+    ],
+    "version": "1.6",
+    "updated": "2018-12-08",
+    "releaseNotes": "1. 新增比例調整功能\n2. 版面優化",
+    "preview": "https://apptrailers.itunes.apple.com/itunes-assets/PurpleVideo123/v4/2b/45/1e/2b451e01-2872-64e6-b141-f714d73b56aa/P63145393_default.m3u8"
+  },
+  {
+    "name": "按揭開支",
+    "description": "與按揭及相關開支計算有關的實用工具。",
+    "links": {
+      "apple": "https://apps.apple.com/hk/app/%E6%8C%89%E6%8F%AD%E9%96%8B%E6%94%AF/id1445545820?uo=4"
+    },
+    "icon": "assets/app-23.png",
+    "id": "app-24",
+    "category": "生活工具",
+    "screenshots": [
+      "assets/app-24-screen-0.jpg",
+      "assets/app-24-screen-1.jpg",
+      "assets/app-24-screen-2.jpg"
+    ],
+    "version": "2.1",
+    "updated": "2026-10-15",
+    "releaseNotes": "1. layout improvement\n2. 優化住宅差餉及地租試算\n3. 優化傢私電器計算表"
+  },
+  {
+    "name": "考車",
+    "description": "透過模擬筆試及語音題目，重溫駕駛知識。",
+    "links": {
+      "apple": "https://apps.apple.com/hk/app/%E8%80%83%E8%BB%8A/id1381220671?uo=4"
+    },
+    "icon": "assets/app-24.png",
+    "id": "app-25",
+    "category": "閱讀學習",
+    "screenshots": [
+      "assets/app-25-screen-0.jpg",
+      "assets/app-25-screen-1.jpg",
+      "assets/app-25-screen-2.jpg"
+    ],
+    "version": "1.1",
+    "updated": "2018-07-10",
+    "releaseNotes": "版面修正",
+    "video": {
+      "title": "考車 driving test",
+      "url": "https://www.youtube.com/watch?v=uVDE8xoSbws"
+    }
+  },
+  {
+    "name": "聖經|Holy Bible",
+    "description": "閱讀中英文聖經，亦提供語音與經文分享。",
+    "links": {
+      "apple": "https://apps.apple.com/hk/app/%E8%81%96%E7%B6%93-holy-bible/id1362052637?uo=4"
+    },
+    "icon": "assets/app-25.png",
+    "id": "app-26",
+    "category": "閱讀學習",
+    "screenshots": [
+      "assets/app-26-screen-0.jpg",
+      "assets/app-26-screen-1.jpg",
+      "assets/app-26-screen-2.jpg"
+    ],
+    "version": "2.0",
+    "updated": "2026-10-14",
+    "releaseNotes": "fixed deprecated functions"
+  },
+  {
+    "name": "姓名",
+    "description": "查閱姓名主題的傳統文化參考內容。",
+    "links": {
+      "apple": "https://apps.apple.com/hk/app/%E5%A7%93%E5%90%8D/id1343178576?uo=4"
+    },
+    "icon": "assets/app-26.png",
+    "id": "app-27",
+    "category": "傳統文化",
+    "screenshots": [
+      "assets/app-27-screen-0.jpg",
+      "assets/app-27-screen-1.jpg",
+      "assets/app-27-screen-2.jpg"
+    ],
+    "version": "2.0",
+    "updated": "2023-02-15",
+    "releaseNotes": "版面及功能優化"
+  },
+  {
+    "name": "孫子兵法十三章",
+    "description": "閱讀十三篇兵法內容，並聆聽多語語音。",
+    "links": {
+      "apple": "https://apps.apple.com/hk/app/%E5%AD%AB%E5%AD%90%E5%85%B5%E6%B3%95%E5%8D%81%E4%B8%89%E7%AB%A0/id1320617007?uo=4"
+    },
+    "icon": "assets/app-27.png",
+    "id": "app-28",
+    "category": "閱讀學習",
+    "screenshots": [
+      "assets/app-28-screen-0.jpg",
+      "assets/app-28-screen-1.jpg",
+      "assets/app-28-screen-2.jpg"
+    ],
+    "version": "1.3",
+    "updated": "2022-10-13",
+    "releaseNotes": "程式優化及更新"
+  },
+  {
+    "name": "食物營養",
+    "description": "搜尋日常食物的營養成分資料。",
+    "links": {
+      "apple": "https://apps.apple.com/hk/app/%E9%A3%9F%E7%89%A9%E7%87%9F%E9%A4%8A/id1400436618?uo=4"
+    },
+    "icon": "assets/app-28.png",
+    "id": "app-29",
+    "category": "生活工具",
+    "screenshots": [
+      "assets/app-29-screen-0.jpg",
+      "assets/app-29-screen-1.jpg",
+      "assets/app-29-screen-2.jpg"
+    ],
+    "version": "1.0",
+    "updated": "2018-07-24",
+    "releaseNotes": "",
+    "video": {
+      "title": "食物營養",
+      "url": "https://www.youtube.com/watch?v=Fr8OXNsAhcQ"
+    }
+  },
+  {
+    "name": "佛經經文",
+    "description": "閱讀多部佛教經文，亦提供語音內容。",
+    "links": {
+      "apple": "https://apps.apple.com/hk/app/%E4%BD%9B%E7%B6%93%E7%B6%93%E6%96%87/id1323039888?uo=4"
+    },
+    "icon": "assets/app-29.png",
+    "id": "app-30",
+    "category": "閱讀學習",
+    "screenshots": [
+      "assets/app-30-screen-0.jpg",
+      "assets/app-30-screen-1.jpg",
+      "assets/app-30-screen-2.jpg"
+    ],
+    "version": "1.4",
+    "updated": "2019-01-27",
+    "releaseNotes": "1. Fixed interstitial ad problem\n2. Coding upgrade to Swift 4.2 Version"
+  },
+  {
+    "name": "語音筆記",
+    "description": "把語音轉成文字，並作儲存、翻譯及分享。",
+    "links": {
+      "apple": "https://apps.apple.com/hk/app/%E8%AA%9E%E9%9F%B3%E7%AD%86%E8%A8%98/id1393790186?uo=4"
+    },
+    "icon": "assets/app-30.png",
+    "id": "app-31",
+    "category": "生活工具",
+    "screenshots": [
+      "assets/app-31-screen-0.jpg",
+      "assets/app-31-screen-1.jpg",
+      "assets/app-31-screen-2.jpg"
+    ],
+    "version": "1.0.1",
+    "updated": "2018-07-09",
+    "releaseNotes": "",
+    "video": {
+      "title": "語音筆記 speech note",
+      "url": "https://www.youtube.com/watch?v=X0q-sWQxQzk"
+    }
+  },
+  {
+    "name": "運動計",
+    "description": "以運動為主題的隨身工具。",
+    "links": {
+      "apple": "https://apps.apple.com/hk/app/%E9%81%8B%E5%8B%95%E8%A8%88/id1419642044?uo=4"
+    },
+    "icon": "assets/app-31.png",
+    "id": "app-32",
+    "category": "生活工具",
+    "screenshots": [
+      "assets/app-32-screen-0.jpg",
+      "assets/app-32-screen-1.jpg",
+      "assets/app-32-screen-2.jpg"
+    ],
+    "version": "2.0",
+    "updated": "2026-10-14",
+    "releaseNotes": "功能及版面優化",
+    "video": {
+      "title": "運動計",
+      "url": "https://www.youtube.com/watch?v=k1dG-cobf8s"
+    }
+  },
+  {
+    "name": "金句王",
+    "description": "閱讀勵志名句，並聆聽粵語或普通話語音。",
+    "links": {
+      "apple": "https://apps.apple.com/hk/app/%E9%87%91%E5%8F%A5%E7%8E%8B/id1396537979?uo=4"
+    },
+    "icon": "assets/app-32.png",
+    "id": "app-33",
+    "category": "閱讀學習",
+    "screenshots": [
+      "assets/app-33-screen-0.jpg",
+      "assets/app-33-screen-1.jpg",
+      "assets/app-33-screen-2.jpg"
+    ],
+    "version": "1.0",
+    "updated": "2018-07-22",
+    "releaseNotes": ""
+  },
+  {
+    "name": "日期計算",
+    "description": "處理日常日期計算需要。",
+    "links": {
+      "apple": "https://apps.apple.com/hk/app/%E6%97%A5%E6%9C%9F%E8%A8%88%E7%AE%97/id1395288604?uo=4"
+    },
+    "icon": "assets/app-33.png",
+    "id": "app-34",
+    "category": "生活工具",
+    "screenshots": [
+      "assets/app-34-screen-0.jpg",
+      "assets/app-34-screen-1.jpg",
+      "assets/app-34-screen-2.jpg"
+    ],
+    "version": "2.0",
+    "updated": "2026-10-16",
+    "releaseNotes": "1. 版面優化及功能改進，更易計算兩日差距",
+    "video": {
+      "title": "日期計算 day calculator",
+      "url": "https://www.youtube.com/shorts/eyaSCZ16nV0"
+    },
+    "preview": "https://apptrailers.itunes.apple.com/itunes-assets/PurpleVideo113/v4/6b/4b/d1/6b4bd17f-ab76-fd94-0a4c-15b57012008a/P63135146_default.m3u8"
+  },
+  {
+    "name": "三國演義",
+    "description": "隨身閱讀與聆聽三國歷史演義故事。",
+    "links": {
+      "apple": "https://apps.apple.com/hk/app/%E4%B8%89%E5%9C%8B%E6%BC%94%E7%BE%A9/id1357640456?uo=4"
+    },
+    "icon": "assets/app-34.png",
+    "id": "app-35",
+    "category": "閱讀學習",
+    "screenshots": [
+      "assets/app-35-screen-0.jpg",
+      "assets/app-35-screen-1.jpg",
+      "assets/app-35-screen-2.jpg"
+    ],
+    "version": "1.4",
+    "updated": "2018-08-08",
+    "releaseNotes": "版面優化"
+  },
+  {
+    "name": "生日密碼",
+    "description": "探索生日主題的參考內容。",
+    "links": {
+      "apple": "https://apps.apple.com/hk/app/%E7%94%9F%E6%97%A5%E5%AF%86%E7%A2%BC/id1445271770?uo=4"
+    },
+    "icon": "assets/app-35.png",
+    "id": "app-36",
+    "category": "傳統文化",
+    "screenshots": [
+      "assets/app-36-screen-0.jpg",
+      "assets/app-36-screen-1.jpg",
+      "assets/app-36-screen-2.jpg"
+    ],
+    "version": "1.0",
+    "updated": "2018-12-05",
+    "releaseNotes": "",
+    "preview": "https://apptrailers.itunes.apple.com/itunes-assets/PurpleVideo128/v4/26/7f/e9/267fe92f-c501-bb53-84bd-ef5426f3ff2a/P56589258_default.m3u8"
+  },
+  {
+    "name": "笑話",
+    "description": "透過幽默題材與語音內容，為日常增添笑聲。",
+    "links": {
+      "apple": "https://apps.apple.com/hk/app/%E7%AC%91%E8%A9%B1/id1356592665?uo=4"
+    },
+    "icon": "assets/app-36.png",
+    "id": "app-37",
+    "category": "遊戲娛樂",
+    "screenshots": [
+      "assets/app-37-screen-0.jpg",
+      "assets/app-37-screen-1.jpg",
+      "assets/app-37-screen-2.jpg"
+    ],
+    "version": "1.4",
+    "updated": "2018-06-23",
+    "releaseNotes": "功能優化"
+  },
+  {
+    "name": "冷笑話",
+    "description": "隨時閱讀幽默小段子，輕鬆一下。",
+    "links": {
+      "apple": "https://apps.apple.com/hk/app/%E5%86%B7%E7%AC%91%E8%A9%B1/id1398312754?uo=4",
+      "google": "https://play.google.com/store/apps/details?id=ihl.cool&hl=zh_TW"
+    },
+    "icon": "assets/app-37.png",
+    "id": "app-38",
+    "category": "遊戲娛樂",
+    "screenshots": [
+      "assets/app-38-screen-0.jpg",
+      "assets/app-38-screen-1.jpg",
+      "assets/app-38-screen-2.jpg"
+    ],
+    "version": "1.0",
+    "updated": "2018-07-23",
+    "releaseNotes": ""
+  },
+  {
+    "name": "鬼谷縱橫",
+    "description": "閱讀鬼谷主題的文化參考內容。",
+    "links": {
+      "apple": "https://apps.apple.com/hk/app/%E9%AC%BC%E8%B0%B7%E7%B8%B1%E6%A9%AB/id1441248821?uo=4"
+    },
+    "icon": "assets/app-38.png",
+    "id": "app-39",
+    "category": "傳統文化",
+    "screenshots": [
+      "assets/app-39-screen-0.jpg",
+      "assets/app-39-screen-1.jpg",
+      "assets/app-39-screen-2.jpg"
+    ],
+    "version": "1.0",
+    "updated": "2018-11-06",
+    "releaseNotes": ""
+  },
+  {
+    "name": "短篇鬼故事",
+    "description": "閱讀及聆聽短篇靈異故事。",
+    "links": {
+      "apple": "https://apps.apple.com/hk/app/%E7%9F%AD%E7%AF%87%E9%AC%BC%E6%95%85%E4%BA%8B/id1329280819?uo=4"
+    },
+    "icon": "assets/app-39.png",
+    "id": "app-40",
+    "category": "遊戲娛樂",
+    "screenshots": [
+      "assets/app-40-screen-0.jpg",
+      "assets/app-40-screen-1.jpg",
+      "assets/app-40-screen-2.jpg"
+    ],
+    "version": "1.4",
+    "updated": "2018-08-27",
+    "releaseNotes": "功能優化"
+  },
+  {
+    "name": "唐詩",
+    "description": "閱讀唐代詩作，並聆聽粵語或普通話語音。",
+    "links": {
+      "apple": "https://apps.apple.com/hk/app/%E5%94%90%E8%A9%A9/id1296633044?uo=4"
+    },
+    "icon": "assets/app-40.png",
+    "id": "app-41",
+    "category": "閱讀學習",
+    "screenshots": [
+      "assets/app-41-screen-0.jpg",
+      "assets/app-41-screen-1.jpg",
+      "assets/app-41-screen-2.jpg"
+    ],
+    "version": "1.3",
+    "updated": "2018-06-17",
+    "releaseNotes": "功能優化"
+  },
+  {
+    "name": "佛說",
+    "description": "隨身瀏覽佛學主題的參考內容。",
+    "links": {
+      "apple": "https://apps.apple.com/hk/app/%E4%BD%9B%E8%AA%AA/id1441240924?uo=4"
+    },
+    "icon": "assets/app-41.png",
+    "id": "app-42",
+    "category": "傳統文化",
+    "screenshots": [
+      "assets/app-42-screen-0.jpg",
+      "assets/app-42-screen-1.jpg",
+      "assets/app-42-screen-2.jpg"
+    ],
+    "version": "1.0",
+    "updated": "2018-11-06",
+    "releaseNotes": ""
+  },
+  {
+    "name": "Steel Data",
+    "description": "查閱鋼材種類、尺寸及單位重量資料。",
+    "links": {
+      "apple": "https://apps.apple.com/hk/app/steel-data/id1255989099?uo=4",
+      "google": "https://play.google.com/store/apps/details?id=ihl.steeldata&hl=zh_TW"
+    },
+    "icon": "assets/app-42.png",
+    "id": "app-43",
+    "category": "生活工具",
+    "screenshots": [
+      "assets/app-43-screen-0.jpg",
+      "assets/app-43-screen-1.jpg",
+      "assets/app-43-screen-2.jpg"
+    ],
+    "version": "2.0",
+    "updated": "2018-06-29",
+    "releaseNotes": "function improvement"
+  },
+  {
+    "name": "OCR Object",
+    "description": "識辨物件，查看英文名稱及聆聽讀音。",
+    "links": {
+      "apple": "https://apps.apple.com/hk/app/ocr-object/id1389062969?uo=4"
+    },
+    "icon": "assets/app-43.png",
+    "id": "app-44",
+    "category": "生活工具",
+    "screenshots": [
+      "assets/app-44-screen-0.jpg",
+      "assets/app-44-screen-1.jpg",
+      "assets/app-44-screen-2.jpg"
+    ],
+    "version": "1.3",
+    "updated": "2018-06-24",
+    "releaseNotes": "1. 版面優化\n2. 加入文字編輯功能",
+    "video": {
+      "title": "OCR Object Recognization",
+      "url": "https://www.youtube.com/watch?v=8uRpqauFu6Q"
+    }
+  },
+  {
+    "name": "入油紀錄",
+    "description": "整理車輛的入油紀錄，方便日後查看。",
+    "links": {
+      "apple": "https://apps.apple.com/hk/app/%E5%85%A5%E6%B2%B9%E7%B4%80%E9%8C%84/id6819721847?uo=4"
+    },
+    "icon": "assets/app-44.png",
+    "id": "app-45",
+    "category": "生活工具",
+    "screenshots": [
+      "assets/app-45-screen-0.jpg",
+      "assets/app-45-screen-1.jpg",
+      "assets/app-45-screen-2.jpg"
+    ],
+    "version": "2.2",
+    "updated": "2026-10-13",
+    "releaseNotes": "Layout improvement and added introduction video",
+    "video": {
+      "title": "入油紀錄",
+      "url": "https://www.youtube.com/shorts/sTMvPzl1k5A"
+    },
+    "preview": "https://apptrailers.itunes.apple.com/itunes-assets/PurpleVideo221/v4/fd/08/4a/fd084aa8-fe26-5368-d062-8694b2c6e3c6/P1522349771_default.m3u8"
+  },
+  {
+    "name": "OCR Text",
+    "description": "以相機辨識文字，並作朗讀、編輯及翻譯。",
+    "links": {
+      "apple": "https://apps.apple.com/hk/app/ocr-text/id1390231574?uo=4"
+    },
+    "icon": "assets/app-45.png",
+    "id": "app-46",
+    "category": "生活工具",
+    "screenshots": [
+      "assets/app-46-screen-0.jpg",
+      "assets/app-46-screen-1.jpg",
+      "assets/app-46-screen-2.jpg"
+    ],
+    "version": "1.3",
+    "updated": "2018-06-27",
+    "releaseNotes": "版面優化",
+    "video": {
+      "title": "OCR Text - Recognize text 識別文字",
+      "url": "https://www.youtube.com/watch?v=EBNObN-nU_Q"
+    }
+  },
+  {
+    "name": "好好愛你",
+    "description": "以伴侶相處為主題，為日常關係留一份用心。",
+    "links": {
+      "apple": "https://apps.apple.com/hk/app/%E5%A5%BD%E5%A5%BD%E6%84%9B%E4%BD%A0/id6821622299?uo=4"
+    },
+    "icon": "assets/app-46.png",
+    "id": "app-47",
+    "category": "生活工具",
+    "screenshots": [
+      "assets/app-47-screen-0.jpg",
+      "assets/app-47-screen-1.jpg",
+      "assets/app-47-screen-2.jpg"
+    ],
+    "version": "1.3",
+    "updated": "2026-10-14",
+    "releaseNotes": "layout improvement",
+    "video": {
+      "title": "好好愛你",
+      "url": "https://www.youtube.com/shorts/BgeLqufjH3s"
+    },
+    "preview": "https://apptrailers.itunes.apple.com/itunes-assets/PurpleVideo211/v4/09/8b/ae/098bae89-4a1b-3c8a-45c3-443b96391c9c/P1520170397_default.m3u8"
+  }
+]
