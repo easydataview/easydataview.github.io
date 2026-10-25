@@ -77,6 +77,7 @@ else{const frame=document.createElement('iframe');frame.src='https://www.youtube
       if(isDetail && location.pathname.endsWith('/'+app.id+'.html')){
         targets.push(...document.querySelectorAll('.detail-hero img'));
         targets.push(...document.querySelectorAll('.detail-emblem'));
+        targets.push(...document.querySelectorAll('[data-official-apple-icon]'));
       }
       for(const element of targets){
         const img=element.tagName==='IMG'?element:document.createElement('img');
@@ -84,6 +85,8 @@ else{const frame=document.createElement('iframe');frame.src='https://www.youtube
         const fallback=img.getAttribute('src');
         img.onerror=()=>{img.onerror=null;if(fallback)img.src=fallback;else img.style.visibility='hidden'};
         img.src=url;
+        img.hidden=false;
+        img.parentElement?.querySelector('.apple-icon-fallback')?.remove();
         img.alt=app.name+' — Apple App Store 官方圖示';
         img.loading='lazy';
       }
