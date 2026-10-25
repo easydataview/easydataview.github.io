@@ -42,7 +42,7 @@ if(search)search.addEventListener('input',()=>{visibleLimit=12;update()});
 document.getElementById('load-more')?.addEventListener('click',()=>{visibleLimit+=12;update()});
 if(search){
  bindCatalog();
- fetch(new URL('apps.json',portfolioBaseUrl)).then(r=>{if(!r.ok)throw Error('Catalog unavailable');return r.json()}).then(apps=>{catalog=apps;update()}).catch(error=>console.warn('Catalog fallback',error));
+ fetch(new URL('apps.json',portfolioBaseUrl)).then(r=>{if(!r.ok)throw Error('Catalog unavailable');return r.json()}).then(apps=>{catalog=apps;installStoreButtons(apps);update()}).catch(error=>console.warn('Catalog fallback',error));
 }
 const share=document.getElementById('share-app');if(share)share.addEventListener('click',async()=>{const status=document.getElementById('share-status');try{await navigator.clipboard.writeText(location.href);status.textContent='已複製作品連結。'}catch{status.textContent='可複製瀏覽器網址列分享此作品。'}});
 // No analytics requests are made without a configured service and visitor consent.
@@ -224,4 +224,27 @@ function syncAppleRecentTop10(results){
   ranked.forEach((x,i)=>{const card=cards.find(c=>c.querySelector('a[href*="apps/app-"]')?.getAttribute('href')?.includes(x.app.id+'.html'));if(card){card.dataset.appleUpdateRank=String(i+1);card.dataset.appleUpdated=new Date(dates.get(x.id)).toISOString().slice(0,10)}});
   if(category==='recent-top10')update();
  }).catch(()=>{recentLoaded=true;if(category==='recent-top10')update()});
+}
+
+// Direct Apple App Store shortcut on each homepage app card.
+function installStoreButtons(apps){
+ const byId=new Map(apps.map(a=>[a.id,a]));
+ document.querySelectorAll('.real-card').forEach(card=>{
+  const appId=card.dataset.appId||card.querySelector('a[href*="apps/app-"]')?.getAttribute('href')?.match(/app-[0-9]+/)?.[0];
+  const app=byId.get(appId),appleUrl=app?.links?.apple;
+  if(!appleUrl||!/^https:\/\/apps\.apple\.com\//.test(appleUrl))return;
+  if(card.querySelector('.appstore-shortcut'))return;
+  const a=document.createElement('a');
+  a.className='appstore-shortcut';
+  a.href=appleUrl;
+  a.target='_blank';
+  a.rel='noopener noreferrer';
+  a.setAttribute('aria-label','在 Apple App Store 下載 '+app.name);
+  a.title='在 App Store 查看及下載 '+app.name;
+  const icon=document.createElement('span');icon.className='appstore-symbol';icon.setAttribute('aria-hidden','true');icon.textContent='A';
+  const label=document.createElement('span');label.textContent='App Store 下載';
+  a.append(icon,label);
+  const details=card.querySelector('.simple-action');
+  if(details)details.insertAdjacentElement('afterend',a);else card.append(a);
+ });
 }
