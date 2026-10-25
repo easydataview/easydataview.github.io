@@ -1,38 +1,39 @@
 name: Deploy GitHub Pages
-
 on:
   push:
     branches: [main]
     paths:
-      - "docs/**"
-      - ".github/workflows/deploy-pages.yml"
+      - 'docs/**'
+      - '.github/workflows/deploy-pages.yml'
   workflow_dispatch:
-
 permissions:
   contents: read
   pages: write
   id-token: write
-
 concurrency:
   group: github-pages
   cancel-in-progress: true
-
 jobs:
   deploy:
-    if: ${{ hashFiles('docs/index.html') != '' }}
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Set up Pages
+      - uses: actions/checkout@v4
+      - name: Check for website entry point
+        id: site
+        run: |
+          if test -f docs/index.html; then echo "exists=true" >> "$GITHUB_OUTPUT"; else echo "exists=false" >> "$GITHUB_OUTPUT"; fi
+      - name: Configure Pages
+        if: steps.site.outputs.exists == 'true'
         uses: actions/configure-pages@v5
-      - name: Upload site files
+      - name: Upload site
+        if: steps.site.outputs.exists == 'true'
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs
-      - name: Deploy to GitHub Pages
+      - name: Deploy
+        if: steps.site.outputs.exists == 'true'
         id: deployment
         uses: actions/deploy-pages@v4
