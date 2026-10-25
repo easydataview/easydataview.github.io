@@ -125,3 +125,66 @@ function syncAppleStoreCategories(results){
    const note=document.querySelector('.catalog-note .note');if(note)note.append(' 分類以 Apple App Store 官方資料為優先；Apple 分類不可取得或只有 Android 版本時保留原有分類。');
  }).catch(()=>{});
 }
+
+// Prefer App Store preview video and screenshots. Google Play remains a fallback for Android-only apps.
+// YouTube demos are supplementary, never substituted for official store preview videos.
+(async function preferStoreMedia(){
+ if(!/\/apps\/app-\d+\.html$/i.test(location.pathname))return;
+ const appId=location.pathname.match(/app-\d+\.html$/)?.[0].replace('.html','');
+ if(!appId)return;
+ try{
+  const response=await fetch(new URL('apps.json',portfolioBaseUrl));
+  if(!response.ok)return;
+  const app=(await response.json()).find(a=>a.id===appId);
+  if(!app)return;
+  const appleId=(app.links?.apple||'').match(/\/id(\d+)/)?.[1];
+  let apple=null;
+  if(appleId){
+   try{
+    const r=await fetch('https://itunes.apple.com/lookup?id='+encodeURIComponent(appleId)+'&country=hk&entity=software');
+    if(r.ok)apple=(await r.json()).results?.find(x=>String(x.trackId)===appleId)||null;
+   }catch(e){console.warn('Apple media metadata unavailable',e)}
+  }
+  const screens=document.querySelector('.screens');
+  const validScreens=(apple?.screenshotUrls?.length?apple.screenshotUrls:apple?.ipadScreenshotUrls)||[];
+  // If an App Store listing supplies screenshots, these supersede any bundled image sources.
+  if(screens&&validScreens.length){
+   screens.replaceChildren();
+   validScreens.slice(0,8).forEach((src,i)=>{
+    if(!/^https:\/\//.test(src))return;
+    const link=document.createElement('a');link.href=src;link.target='_blank';link.rel='noopener noreferrer';
+    const img=document.createElement('img');img.src=src;img.loading='lazy';img.alt=app.name+' Apple App Store 截圖 '+(i+1);
+    link.append(img);screens.append(link);
+   });
+   const note=screens.parentElement.querySelector('.note');if(note)note.textContent='圖片來源：Apple App Store · 點擊可放大瀏覽。';
+  }else if(screens){
+   // Retain bundled screenshots; don't misrepresent their provenance if the App Store cannot be queried.
+   const note=screens.parentElement.querySelector('.note');
+   if(note)note.textContent=appleId?'現有作品截圖（Apple 官方截圖暫未能核實）。':'作品截圖（只有 Android 版本時使用 Google Play 素材）。';
+  }
+  // App Store's preview video supplied by catalog curation takes priority over YouTube.
+  const storeVideo=app.preview;
+  if(appleId&&storeVideo&&/^https:\/\//.test(storeVideo)){
+   const demo=document.querySelector('.watch-intro');
+   if(demo){
+    const container=document.createElement('section');container.className='official-preview';
+    const heading=document.createElement('h2');heading.textContent='Apple App Store 官方預覽影片';
+    const player=document.createElement('div');player.className='watch-player';player.dataset.preview=storeVideo;player.dataset.title=app.name+' App Store 預覽';
+    const btn=document.createElement('button');btn.type='button';btn.className='load-video';btn.textContent='▶ 播放官方預覽影片';
+    player.append(btn);container.append(heading,player);
+    demo.parentNode.insertBefore(container,demo);demo.querySelector('h2')?.replaceChildren(document.createTextNode('YouTube 補充示範影片'));
+    // New button is created after the base player listeners ran: forward to the existing playback mechanism.
+    btn.addEventListener('click',async()=>{
+     const video=document.createElement('video');video.controls=true;video.playsInline=true;video.preload='none';player.replaceChildren(video);
+     if(video.canPlayType('application/vnd.apple.mpegurl')){video.src=storeVideo;video.play().catch(()=>{})}
+     else if(storeVideo.includes('.m3u8')){
+      try{await loadHls();if(window.Hls?.isSupported()){const hls=new window.Hls();hls.loadSource(storeVideo);hls.attachMedia(video);hls.on(window.Hls.Events.MANIFEST_PARSED,()=>video.play().catch(()=>{}))}else player.textContent='請在 App Store 觀看官方預覽影片。'}catch{player.textContent='請在 App Store 觀看官方預覽影片。'}
+     }else{video.src=storeVideo;video.play().catch(()=>{})}
+    });
+   }
+  }else{
+   const demo=document.querySelector('.watch-intro');
+   if(demo)demo.querySelector('h2')?.replaceChildren(document.createTextNode('YouTube 作品示範（非商店官方預覽）'));
+  }
+ }catch(e){console.warn('Media priority fallback',e)}
+})();
