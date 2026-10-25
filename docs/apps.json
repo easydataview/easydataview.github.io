@@ -550,22 +550,22 @@
     "releaseNotes": "1. Fixed interstitial ad problem\n2. Coding upgrade to Swift 4.2 Version"
   },
   {
-    "name": "語音筆記",
-    "description": "把語音轉成文字，並作儲存、翻譯及分享。",
+    "name": "Saying",
+    "description": "錄音、影片與即時語音轉文字，支援筆記編輯、Word／PDF／字幕匯出及朗讀分享。",
     "links": {
-      "apple": "https://apps.apple.com/hk/app/%E8%AA%9E%E9%9F%B3%E7%AD%86%E8%A8%98/id1393790186?uo=4"
+      "apple": "https://apps.apple.com/hk/app/saying/id1393790186"
     },
     "icon": "assets/app-30.png",
     "id": "app-31",
-    "category": "生活工具",
+    "category": "生產力工具",
     "screenshots": [
       "assets/app-31-screen-0.jpg",
       "assets/app-31-screen-1.jpg",
       "assets/app-31-screen-2.jpg"
     ],
-    "version": "1.0.1",
+    "version": "2.2",
     "updated": "2018-07-09",
-    "releaseNotes": "",
+    "releaseNotes": "Function improvements",
     "video": {
       "title": "語音筆記 speech note",
       "url": "https://www.youtube.com/watch?v=X0q-sWQxQzk"
@@ -862,8 +862,8 @@
     "updated": "2026-10-25",
     "releaseNotes": "版面優化",
     "video": {
-      "title": "OCR Text - Recognize text 識別文字",
-      "url": "https://www.youtube.com/watch?v=EBNObN-nU_Q"
+      "title": "快識字 App 示範",
+      "url": "https://www.youtube.com/shorts/GLhP3KN8sS8"
     }
   },
   {
@@ -900,6 +900,27 @@
     "updated": "2026-10-25",
     "version": "2.1",
     "releaseNotes": "Layout and function improvements",
+    "screenshots": []
+  },
+  {
+    "id": "app-49",
+    "name": "簡單換算",
+    "description": "179 種單位換算、Base 2–64 進制轉換、IEEE 754 及 Base64 編解碼，支援漫畫分享卡。",
+    "links": {
+      "apple": "https://apps.apple.com/hk/app/%E7%B0%A1%E5%96%AE%E6%8F%9B%E7%AE%97/id1369706704"
+    },
+    "category": "工具程式",
+    "version": "2.0",
+    "screenshots": []
+  },
+  {
+    "id": "app-50",
+    "name": "小英伴",
+    "description": "為孩子準備 ABC、Phonics、詞彙、互動遊戲、英文繪本及英語探索地圖，附家長學習進度。",
+    "links": {
+      "apple": "https://apps.apple.com/hk/app/%E5%B0%8F%E8%8B%B1%E4%BC%B4/id6824211418"
+    },
+    "category": "教育",
     "screenshots": []
   }
 ]
