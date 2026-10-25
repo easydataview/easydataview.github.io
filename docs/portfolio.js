@@ -13,7 +13,7 @@ function update(){
  const cards=[...document.querySelectorAll('.real-card')];
  cards.forEach(c=>{
   const id=c.querySelector('a[href*="apps/app-"]')?.getAttribute('href')?.match(/app-[0-9]+/)?.[0];
-  const ok=(platform==='all'||c.dataset.platform.split(' ').includes(platform))&&(recent?recentTop10Ids.has(id):(category==='all'||c.dataset.category===category))&&(c.dataset.name+' '+c.dataset.category).toLocaleLowerCase().includes(q);
+  const ok=(platform==='all'||c.dataset.platform.split(' ').includes(platform))&&(recent?recentTop10Ids.has(id):(category==='all'||c.dataset.category===category))&&(c.dataset.name+' '+c.dataset.category+' '+(c.querySelector('p')?.textContent||'')).toLocaleLowerCase().includes(q);
   c.hidden=true;c.style.order='';if(ok)matches.push(c);
  });
  if(recent)matches.sort((a,b)=>Number(a.dataset.appleUpdateRank||999)-Number(b.dataset.appleUpdateRank||999));
@@ -63,6 +63,15 @@ else{const frame=document.createElement('iframe');frame.src='https://www.youtube
   }).filter(Boolean);
   if(!entries.length)return;
   const ids=[...new Set(entries.map(e=>e.storeId))];
+  const appleIds=new Set(entries.map(e=>e.app.id));
+  document.querySelectorAll('.real-card').forEach(card=>{
+    const appId=card.querySelector('a[href*="apps/app-"]')?.getAttribute('href')?.match(/app-[0-9]+/)?.[0];
+    if(appleIds.has(appId)){
+      const img=card.querySelector('.compact-top img');
+      if(img){img.removeAttribute('src');img.alt='Apple App Store 圖示載入中';img.classList.add('apple-icon-pending');}
+    }
+  });
+
   function applyArtwork(results){
     const artwork=new Map(results.filter(x=>x.trackId&&x.artworkUrl512).map(x=>[String(x.trackId),x.artworkUrl512]));
     for(const {app,storeId} of entries){
@@ -83,8 +92,9 @@ else{const frame=document.createElement('iframe');frame.src='https://www.youtube
         const img=element.tagName==='IMG'?element:document.createElement('img');
         if(img!==element){img.width=58;img.height=58;img.alt=app.name+' Apple App Store 圖示';element.replaceWith(img)}
         const fallback=img.getAttribute('src');
-        img.onerror=()=>{img.onerror=null;if(fallback)img.src=fallback;else img.style.visibility='hidden'};
+        img.onerror=()=>{img.onerror=null;if(fallback)img.src=fallback;else {img.removeAttribute('src');img.alt='官方圖示暫時無法載入';img.classList.add('apple-icon-pending');}};
         img.src=url;
+        img.classList.remove('apple-icon-pending');
         img.hidden=false;
         img.parentElement?.querySelector('.apple-icon-fallback')?.remove();
         img.alt=app.name+' — Apple App Store 官方圖示';
@@ -123,31 +133,32 @@ else{const frame=document.createElement('iframe');frame.src='https://www.youtube
 
 // Apple App Store is the classification authority for every iOS app where official metadata is available.
 function syncAppleStoreCategories(results){
- const genres={6000:'商業',6001:'天氣',6002:'工具程式',6003:'旅遊',6004:'運動',6005:'社交網絡',6006:'參考',6007:'生產力工具',6008:'相片與影片',6009:'新聞',6010:'導航',6011:'音樂',6012:'生活風格',6013:'健康與健身',6014:'遊戲',6015:'財經',6016:'娛樂',6017:'教育',6018:'書籍',6020:'醫療',6021:'雜誌與報紙',6023:'美食佳飲',6024:'購物',6026:'開發者工具',6027:'圖像與設計'};
- const categories=new Map(results.filter(r=>r.trackId&&r.primaryGenreId).map(r=>[String(r.trackId),genres[Number(r.primaryGenreId)]||r.primaryGenreName]));
- const appleApps=new Map();
- document.querySelectorAll('.real-card').forEach(card=>{
-   const href=card.querySelector('a[href*="apps/app-"]')?.getAttribute('href')||'';
-   const appId=href.match(/app-\\d+/)?.[0];if(appId)appleApps.set(appId,card);
- });
- // Do not guess classifications for an unavailable App Store listing.
+ const genreMap=new Map(results.filter(r=>r.trackId&&r.primaryGenreName).map(r=>[String(r.trackId),r.primaryGenreName]));
  fetch(new URL('apps.json',portfolioBaseUrl)).then(r=>r.ok?r.json():[]).then(apps=>{
-   let official=0;
-   for(const app of apps){const id=(app.links?.apple||'').match(/\\/id(\\d+)/)?.[1];if(!id)continue;
-     const genre=categories.get(id),card=appleApps.get(app.id);if(!genre||!card)continue;
-     card.dataset.category=genre;card.dataset.categorySource='apple';official++;
-   }
-   if(!official)return;
-   const bar=document.querySelector('.category-bar');
-   if(bar){
-     const values=[...new Set([...document.querySelectorAll('.real-card')].map(c=>c.dataset.category).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'zh-Hant'));
-     // Existing filter listeners are attached to old buttons; provide equivalent listeners on replacements.
-     bar.replaceChildren();
-     for(const name of ['all','recent-top10',...values]){const b=document.createElement('button');b.type='button';b.dataset.categoryFilter=name;b.textContent=name==='all'?'所有分類':name==='recent-top10'?'🆕 最近更新 Top 10':name;if(name==='recent-top10')b.classList.add('recent-top10-btn');b.className=name==='all'?'active':'';b.setAttribute('aria-pressed',String(name==='all'));b.addEventListener('click',()=>{category=name;visibleLimit=12;bar.querySelectorAll('button').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b))});update()});bar.append(b)}
-   }
-   category='all';visibleLimit=12;update();
-   const note=document.querySelector('.catalog-note .note');if(note)note.append(' 分類以 Apple App Store 官方資料為優先；Apple 分類不可取得或只有 Android 版本時保留原有分類。');
- }).catch(()=>{});
+  const byId=new Map(apps.map(a=>[a.id,a]));
+  let official=0;
+  document.querySelectorAll('.real-card').forEach(card=>{
+    const appId=card.querySelector('a[href*="apps/app-"]')?.getAttribute('href')?.match(/app-[0-9]+/)?.[0];
+    const app=byId.get(appId);
+    const appleId=(app?.links?.apple||'').match(/\/id([0-9]+)/)?.[1];
+    const genre=genreMap.get(appleId);
+    if(genre){card.dataset.category=genre;card.dataset.categorySource='apple';official++;}
+  });
+  if(!official)return;
+  const bar=document.querySelector('.category-bar');if(!bar)return;
+  const selected=category;
+  const values=[...new Set([...document.querySelectorAll('.real-card')].map(c=>c.dataset.category).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'zh-Hant'));
+  bar.replaceChildren();
+  for(const name of ['all','recent-top10',...values]){
+   const b=document.createElement('button');b.type='button';b.dataset.categoryFilter=name;
+   b.textContent=name==='all'?'所有分類':name==='recent-top10'?'🆕 最近更新 Top 10':name;
+   if(name==='recent-top10')b.classList.add('recent-top10-btn');
+   b.classList.toggle('active',name===selected);b.setAttribute('aria-pressed',String(name===selected));
+   b.addEventListener('click',()=>{category=name;visibleLimit=12;bar.querySelectorAll('button').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b))});update()});bar.append(b);
+  }
+  if(selected!=='all'&&selected!=='recent-top10'&&!values.includes(selected))category='all';
+  update();
+ }).catch(e=>console.warn('Category fallback',e));
 }
 
 // Prefer App Store preview video and screenshots. Google Play remains a fallback for Android-only apps.
