@@ -1,5 +1,10 @@
 name: Refresh Apple Store and YouTube Catalog
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/refresh_app_catalog.py'
+      - '.github/workflows/refresh-app-catalog.yml'
   workflow_dispatch:
   schedule:
     - cron: "17 2 * * *"
