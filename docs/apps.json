@@ -371,13 +371,13 @@
       "assets/app-14-screen-1.jpg",
       "assets/app-14-screen-2.jpg"
     ],
-    "version": "3.2",
-    "updated": "2026-10-28",
-    "releaseNotes": "Layout improvement",
+    "version": "3.4",
+    "updated": "2026-10-29",
+    "releaseNotes": "search function improvements",
     "storeCategory": "Reference",
     "searchKeywords": "建築字典 查閱建築行業用語，亦提供語音內容。 實用工具",
     "storeName": "建築字典",
-    "appleArtwork": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/75/3a/23/753a23d9-0adf-e6e4-4569-46fad196c88f/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+    "appleArtwork": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/fe/a3/b5/fea3b5bf-0b9d-cff1-51b1-5864580ed8ab/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
     "appleScreenshots": [
       "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/21/af/6c/21af6cfa-e530-0868-2072-e4ebc3f4bf92/Screenshot_iPhone_17_28-10-2026_at_12.28.34_U202fAM.png/320x480bb.jpg",
       "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/8d/e5/d0/8de5d030-f4fa-5a9a-c195-5a24de71a60f/Screenshot_iPhone_17_28-10-2026_at_12.28.37_U202fAM.png/320x480bb.jpg",
@@ -1504,19 +1504,22 @@
       "apple": "https://apps.apple.com/hk/app/%E9%A6%99%E6%B8%AF%E8%BB%8A%E4%B8%BB%E9%80%9A/id6826221694?uo=4"
     },
     "screenshots": [],
-    "version": "2.2",
+    "version": "2.4",
     "storeCategory": "Utilities",
-    "storeName": "香港車主通",
-    "appleArtwork": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f7/78/b7/f778b71e-2fdf-20b1-9d29-0bcfced5a048/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg",
-    "updated": "2026-10-28",
+    "storeName": "駕駛伙伴",
+    "appleArtwork": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/bb/91/a5/bb91a5fa-ecdf-0dd6-1eab-7c96e352daed/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+    "updated": "2026-10-29",
     "appleScreenshots": [
-      "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/8c/9f/8b/8c9f8be5-ad77-3fbd-2868-ab42f79c3f29/Screenshot_iPhone_17_24-10-2026_at_1.31.29_U202fAM.png/320x480bb.jpg",
-      "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/9a/fe/9a/9afe9ac4-9591-7928-2d67-ccef402a1147/Screenshot_iPhone_17_24-10-2026_at_1.31.53_U202fAM.png/320x480bb.jpg",
-      "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/08/80/ba/0880ba98-ce28-8dfe-132c-5b3d0ec89fcb/Screenshot_iPhone_17_24-10-2026_at_1.32.01_U202fAM.png/320x480bb.jpg",
-      "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/16/68/ad/1668adfb-5314-2f62-d3c3-03393ac06b6e/Screenshot_iPhone_17_24-10-2026_at_1.32.12_U202fAM.png/320x480bb.jpg",
-      "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/ef/8c/d1/ef8cd140-bdba-a468-24c6-a2551a939d83/Screenshot_iPhone_17_24-10-2026_at_1.32.20_U202fAM.png/320x480bb.jpg",
-      "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/77/27/c3/7727c3d7-8b3e-0fa7-2acf-41ae385881ce/Screenshot_iPhone_17_24-10-2026_at_1.32.33_U202fAM.png/320x480bb.jpg"
-    ]
+      "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/d9/68/74/d96874e8-9438-e977-044d-c37e4d439299/Screenshot_iPhone_17_29-10-2026_at_11.59.19_U202fPM.png/320x480bb.jpg",
+      "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/62/c5/6e/62c56e2a-60b0-7c22-dcff-e6d0a05a9269/Screenshot_iPhone_17_29-10-2026_at_11.59.23_U202fPM.png/320x480bb.jpg",
+      "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/45/3d/fb/453dfbc9-b701-8dfc-65f7-5d9d33ffc838/Screenshot_iPhone_17_29-10-2026_at_11.59.37_U202fPM.png/320x480bb.jpg",
+      "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/06/06/0c/06060c3b-f6e8-e4fd-a098-f056f4f17475/Screenshot_iPhone_17_29-10-2026_at_11.59.49_U202fPM.png/320x480bb.jpg",
+      "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/31/ec/f0/31ecf046-1b97-ea4d-3494-0db398221066/Screenshot_iPhone_17_30-10-2026_at_12.00.14_U202fAM.png/320x480bb.jpg",
+      "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/87/49/28/8749287e-9ef1-d68e-dd60-257f97df9ca7/Screenshot_iPhone_17_30-10-2026_at_12.00.18_U202fAM.png/320x480bb.jpg",
+      "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/a9/ef/f1/a9eff176-c268-6e4f-1027-300c46492a47/Screenshot_iPhone_17_30-10-2026_at_12.00.22_U202fAM.png/320x480bb.jpg",
+      "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/55/54/f2/5554f22b-3b4e-0ec0-ef87-d0fc55d18e40/Screenshot_iPhone_17_30-10-2026_at_12.00.59_U202fAM.png/320x480bb.jpg"
+    ],
+    "releaseNotes": "版面優化＋優化地圖功能"
   },
   {
     "id": "app-53",
