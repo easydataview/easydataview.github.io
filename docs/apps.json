@@ -371,13 +371,13 @@
       "assets/app-14-screen-1.jpg",
       "assets/app-14-screen-2.jpg"
     ],
-    "version": "3.4",
-    "updated": "2026-10-29",
-    "releaseNotes": "search function improvements",
+    "version": "3.5",
+    "updated": "2026-10-30",
+    "releaseNotes": "優化地圖數據",
     "storeCategory": "Reference",
     "searchKeywords": "建築字典 查閱建築行業用語，亦提供語音內容。 實用工具",
     "storeName": "建築字典",
-    "appleArtwork": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/fe/a3/b5/fea3b5bf-0b9d-cff1-51b1-5864580ed8ab/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+    "appleArtwork": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/73/da/dd/73dadd28-92f3-418c-6819-3c0a929a156f/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
     "appleScreenshots": [
       "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/21/af/6c/21af6cfa-e530-0868-2072-e4ebc3f4bf92/Screenshot_iPhone_17_28-10-2026_at_12.28.34_U202fAM.png/320x480bb.jpg",
       "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/8d/e5/d0/8de5d030-f4fa-5a9a-c195-5a24de71a60f/Screenshot_iPhone_17_28-10-2026_at_12.28.37_U202fAM.png/320x480bb.jpg",
