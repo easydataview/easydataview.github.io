@@ -841,9 +841,9 @@
       "assets/app-31-screen-1.jpg",
       "assets/app-31-screen-2.jpg"
     ],
-    "version": "2.4",
-    "updated": "2026-10-23",
-    "releaseNotes": "function and layout improvements",
+    "version": "2.5",
+    "updated": "2026-11-02",
+    "releaseNotes": "優化 \n1. 即時語音轉文字功能；\n2. 將語音檔轉為文字/字幕；\n3. 更簡潔易看的畫面及功能。",
     "video": {
       "title": "語音筆記 speech note",
       "url": "https://www.youtube.com/watch?v=X0q-sWQxQzk"
@@ -851,7 +851,7 @@
     "storeCategory": "Productivity",
     "searchKeywords": "Saying 錄音、影片與即時語音轉文字，支援筆記編輯、Word／PDF／字幕匯出及朗讀分享。 文字與影像工具",
     "storeName": "Saying",
-    "appleArtwork": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/60/b1/17/60b117b6-835d-24bc-78cb-f93fc8e2db93/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+    "appleArtwork": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/3a/cf/d5/3acfd5bc-04ad-5953-8a79-3734602e3167/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
     "appleScreenshots": [
       "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/4f/0e/cb/4f0ecb80-cfe2-86e8-6180-9fe77582ba74/Screenshot_Saying_iPhone_17_19-10-2026_at_12.38.05_U202fPM.png/320x480bb.jpg",
       "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/8b/25/bd/8b25bdd5-c893-7db0-4ceb-9165710e9e8d/Screenshot_Saying_iPhone_17_19-10-2026_at_12.38.09_U202fPM.png/320x480bb.jpg",
