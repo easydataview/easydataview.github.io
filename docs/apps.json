@@ -371,13 +371,13 @@
       "assets/app-14-screen-1.jpg",
       "assets/app-14-screen-2.jpg"
     ],
-    "version": "4.3",
-    "updated": "2026-11-04",
-    "releaseNotes": "1. 優化Chat bot\n2. 新增更多參考資料",
+    "version": "4.5",
+    "updated": "2026-11-06",
+    "releaseNotes": "優化AI功能",
     "storeCategory": "Reference",
     "searchKeywords": "建築字典 查閱建築行業用語，亦提供語音內容。 實用工具",
     "storeName": "建築字典",
-    "appleArtwork": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/08/c7/f2/08c7f207-28f7-243c-d48a-48620465e4e5/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+    "appleArtwork": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c7/ad/87/c7ad8796-ee5b-d653-1a68-0a5fe25e9241/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
     "appleScreenshots": [
       "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/21/af/6c/21af6cfa-e530-0868-2072-e4ebc3f4bf92/Screenshot_iPhone_17_28-10-2026_at_12.28.34_U202fAM.png/320x480bb.jpg",
       "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/8d/e5/d0/8de5d030-f4fa-5a9a-c195-5a24de71a60f/Screenshot_iPhone_17_28-10-2026_at_12.28.37_U202fAM.png/320x480bb.jpg",
@@ -841,9 +841,9 @@
       "assets/app-31-screen-1.jpg",
       "assets/app-31-screen-2.jpg"
     ],
-    "version": "2.5",
-    "updated": "2026-11-02",
-    "releaseNotes": "優化 \n1. 即時語音轉文字功能；\n2. 將語音檔轉為文字/字幕；\n3. 更簡潔易看的畫面及功能。",
+    "version": "2.6",
+    "updated": "2026-11-05",
+    "releaseNotes": "優化語音輸入",
     "video": {
       "title": "語音筆記 speech note",
       "url": "https://www.youtube.com/watch?v=X0q-sWQxQzk"
@@ -851,7 +851,7 @@
     "storeCategory": "Productivity",
     "searchKeywords": "Saying 錄音、影片與即時語音轉文字，支援筆記編輯、Word／PDF／字幕匯出及朗讀分享。 文字與影像工具",
     "storeName": "Saying",
-    "appleArtwork": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/3a/cf/d5/3acfd5bc-04ad-5953-8a79-3734602e3167/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+    "appleArtwork": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/65/77/5f/65775fdb-c7e1-ab1f-5a24-9131f5ccd116/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
     "appleScreenshots": [
       "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/4f/0e/cb/4f0ecb80-cfe2-86e8-6180-9fe77582ba74/Screenshot_Saying_iPhone_17_19-10-2026_at_12.38.05_U202fPM.png/320x480bb.jpg",
       "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/8b/25/bd/8b25bdd5-c893-7db0-4ceb-9165710e9e8d/Screenshot_Saying_iPhone_17_19-10-2026_at_12.38.09_U202fPM.png/320x480bb.jpg",
