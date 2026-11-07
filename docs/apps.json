@@ -745,13 +745,13 @@
       "assets/app-28-screen-1.jpg",
       "assets/app-28-screen-2.jpg"
     ],
-    "version": "2.3",
-    "updated": "2026-10-27",
-    "releaseNotes": "喝杯水順便優化了一下",
+    "version": "2.4",
+    "updated": "2026-11-06",
+    "releaseNotes": "版面簡化",
     "storeCategory": "Reference",
     "searchKeywords": "孫子兵法十三章 閱讀十三篇兵法內容，並聆聽多語語音。 閱讀與文學",
     "storeName": "孫子兵法十三章",
-    "appleArtwork": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/1c/a2/07/1ca207c7-d887-9b1e-4ae1-3f95b1965033/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+    "appleArtwork": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/45/b2/d5/45b2d57c-2f42-6285-65e5-0010a3b0656e/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
     "appleScreenshots": [
       "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f3/ab/7e/f3ab7e72-9898-5b01-64cf-8e38fc27730e/Screenshot_iPhone_17_26-10-2026_at_1.15.06_U202fAM.png/320x480bb.jpg",
       "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/3f/6f/16/3f6f16cc-9b23-e6e4-eb2b-7a2d643bb61b/Screenshot_iPhone_17_26-10-2026_at_1.15.13_U202fAM.png/320x480bb.jpg",
@@ -841,9 +841,9 @@
       "assets/app-31-screen-1.jpg",
       "assets/app-31-screen-2.jpg"
     ],
-    "version": "2.6",
-    "updated": "2026-11-05",
-    "releaseNotes": "優化語音輸入",
+    "version": "2.7",
+    "updated": "2026-11-06",
+    "releaseNotes": "修正語音模型",
     "video": {
       "title": "語音筆記 speech note",
       "url": "https://www.youtube.com/watch?v=X0q-sWQxQzk"
@@ -851,7 +851,7 @@
     "storeCategory": "Productivity",
     "searchKeywords": "Saying 錄音、影片與即時語音轉文字，支援筆記編輯、Word／PDF／字幕匯出及朗讀分享。 文字與影像工具",
     "storeName": "Saying",
-    "appleArtwork": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/65/77/5f/65775fdb-c7e1-ab1f-5a24-9131f5ccd116/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+    "appleArtwork": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/12/09/a3/1209a3a1-0271-0de9-95f5-5eabf2d89358/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
     "appleScreenshots": [
       "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/4f/0e/cb/4f0ecb80-cfe2-86e8-6180-9fe77582ba74/Screenshot_Saying_iPhone_17_19-10-2026_at_12.38.05_U202fPM.png/320x480bb.jpg",
       "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/8b/25/bd/8b25bdd5-c893-7db0-4ceb-9165710e9e8d/Screenshot_Saying_iPhone_17_19-10-2026_at_12.38.09_U202fPM.png/320x480bb.jpg",
