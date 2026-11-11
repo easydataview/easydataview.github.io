@@ -371,13 +371,13 @@
       "assets/app-14-screen-1.jpg",
       "assets/app-14-screen-2.jpg"
     ],
-    "version": "4.8",
-    "updated": "2026-11-10",
-    "releaseNotes": "支援iOS 17.6",
+    "version": "4.9",
+    "updated": "2026-11-11",
+    "releaseNotes": "新增AI API功能",
     "storeCategory": "Reference",
     "searchKeywords": "建築字典 查閱建築行業用語，亦提供語音內容。 實用工具",
     "storeName": "建築字典",
-    "appleArtwork": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/7a/93/5d/7a935db6-d8bb-acdb-a8e3-bfbe6810832e/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+    "appleArtwork": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/42/f4/f2/42f4f2bf-3f15-817f-6aa1-a24f2af7710a/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
     "appleScreenshots": [
       "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/21/af/6c/21af6cfa-e530-0868-2072-e4ebc3f4bf92/Screenshot_iPhone_17_28-10-2026_at_12.28.34_U202fAM.png/320x480bb.jpg",
       "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/8d/e5/d0/8de5d030-f4fa-5a9a-c195-5a24de71a60f/Screenshot_iPhone_17_28-10-2026_at_12.28.37_U202fAM.png/320x480bb.jpg",
