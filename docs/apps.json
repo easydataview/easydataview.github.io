@@ -19,7 +19,8 @@
     "releaseNotes": "版面優化",
     "video": {
       "title": "腦筋急轉彎",
-      "url": "https://www.youtube.com/shorts/5F2bEUuXLg0"
+      "url": "https://www.youtube.com/watch?v=5F2bEUuXLg0",
+      "published": "2026-10-18T00:28:29+00:00"
     },
     "storeCategory": "Games",
     "searchKeywords": "腦筋急轉彎 換個角度想答案，享受動腦的樂趣。 趣味遊戲",
@@ -215,7 +216,8 @@
     "releaseNotes": "功能及版面修正",
     "video": {
       "title": "摩斯密碼 Morse Code",
-      "url": "https://www.youtube.com/watch?v=mVbRUqgBqn8"
+      "url": "https://www.youtube.com/watch?v=mVbRUqgBqn8",
+      "published": "2018-08-15T14:45:49+00:00"
     },
     "storeCategory": "Education",
     "searchKeywords": "摩斯密碼 認識摩斯密碼，探索文字轉換與聲音。 語言與兒童學習",
@@ -387,7 +389,12 @@
       "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/22/47/8c/22478c65-2c5c-8aa8-f963-072bfcda2dff/Screenshot_iPhone_17_28-10-2026_at_12.30.13_U202fAM.png/320x480bb.jpg",
       "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/97/64/19/97641980-de02-a6fa-ed05-9c8fab850318/Screenshot_iPhone_17_28-10-2026_at_12.30.27_U202fAM.png/320x480bb.jpg",
       "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/d5/89/c3/d589c3c9-9b76-0461-f5cb-008827066ba1/Screenshot_iPhone_17_28-10-2026_at_12.30.57_U202fAM.png/320x480bb.jpg"
-    ]
+    ],
+    "video": {
+      "title": "建築字典 #construction dictionary #quantitysurveyor #construction",
+      "url": "https://www.youtube.com/watch?v=MYC32LEVV-Y",
+      "published": "2026-10-27T17:08:06+00:00"
+    }
   },
   {
     "name": "道德經",
@@ -468,7 +475,12 @@
       "assets/app-18-screen-2.jpg"
     ],
     "storeCategory": "閱讀學習",
-    "searchKeywords": "孫子兵法 閱讀兵法原文、解釋與語音內容。 閱讀與文學"
+    "searchKeywords": "孫子兵法 閱讀兵法原文、解釋與語音內容。 閱讀與文學",
+    "video": {
+      "title": "《孫子兵法》十三篇",
+      "url": "https://www.youtube.com/watch?v=m9wORjGrf24",
+      "published": "2026-10-25T17:38:53+00:00"
+    }
   },
   {
     "name": "搖骰",
@@ -845,8 +857,9 @@
     "updated": "2026-11-06",
     "releaseNotes": "修正語音模型",
     "video": {
-      "title": "語音筆記 speech note",
-      "url": "https://www.youtube.com/watch?v=X0q-sWQxQzk"
+      "title": "Saying  #語音轉文字#錄音轉文字#影片轉文字#粵語#逐字稿#會議記錄#訪談#課堂筆記#字幕",
+      "url": "https://www.youtube.com/watch?v=okrFnyZotA0",
+      "published": "2026-10-19T05:09:41+00:00"
     },
     "storeCategory": "Productivity",
     "searchKeywords": "Saying 錄音、影片與即時語音轉文字，支援筆記編輯、Word／PDF／字幕匯出及朗讀分享。 文字與影像工具",
@@ -1290,7 +1303,8 @@
     "releaseNotes": "Layout improvement and added introduction video",
     "video": {
       "title": "入油紀錄",
-      "url": "https://www.youtube.com/shorts/sTMvPzl1k5A"
+      "url": "https://www.youtube.com/watch?v=sTMvPzl1k5A",
+      "published": "2026-10-13T07:19:21+00:00"
     },
     "preview": "https://apptrailers.itunes.apple.com/itunes-assets/PurpleVideo221/v4/fd/08/4a/fd084aa8-fe26-5368-d062-8694b2c6e3c6/P1522349771_default.m3u8",
     "storeCategory": "Utilities",
@@ -1326,8 +1340,9 @@
     "updated": "2026-10-23",
     "releaseNotes": "識別直排頁",
     "video": {
-      "title": "快識字 App 示範",
-      "url": "https://www.youtube.com/shorts/GLhP3KN8sS8"
+      "title": "快識字 #smartphone #分享 #分享",
+      "url": "https://www.youtube.com/watch?v=GLhP3KN8sS8",
+      "published": "2026-10-18T17:26:19+00:00"
     },
     "storeCategory": "Utilities",
     "searchKeywords": "快識字 拍照、照片或多頁 PDF 擷取文字，保留原稿排版，支援文字朗讀、編輯及分享。 文字與影像工具",
@@ -1362,7 +1377,8 @@
     "releaseNotes": "layout improvement",
     "video": {
       "title": "好好愛你",
-      "url": "https://www.youtube.com/shorts/BgeLqufjH3s"
+      "url": "https://www.youtube.com/watch?v=BgeLqufjH3s",
+      "published": "2026-10-13T23:20:07+00:00"
     },
     "preview": "https://apptrailers.itunes.apple.com/itunes-assets/PurpleVideo211/v4/09/8b/ae/098bae89-4a1b-3c8a-45c3-443b96391c9c/P1520170397_default.m3u8",
     "storeCategory": "Social Networking",
@@ -1393,8 +1409,9 @@
     "releaseNotes": "Layout and function improvements",
     "screenshots": [],
     "video": {
-      "title": "TimeMates・時差拍檔 — YouTube Shorts",
-      "url": "https://www.youtube.com/shorts/pmCgkEKkbao"
+      "title": "Time Mates #時差拍檔 #時間快照・跨越時差，拉近彼此。",
+      "url": "https://www.youtube.com/watch?v=pmCgkEKkbao",
+      "published": "2026-10-25T06:52:27+00:00"
     },
     "storeCategory": "Utilities",
     "searchKeywords": "TimeMates・時差拍檔 查看朋友與家人的當地時間，以漫畫世界地圖、分類顏色和時間分享卡輕鬆跨時區聯絡。 實用工具",
@@ -1422,8 +1439,9 @@
     "version": "2.3",
     "screenshots": [],
     "video": {
-      "title": "簡單換算 — YouTube Shorts",
-      "url": "https://www.youtube.com/shorts/Le_Oj1KcWNU"
+      "title": "簡單轉換 Unit Convert #smartphone #分享 #分享 #shein #chatgpt #pets",
+      "url": "https://www.youtube.com/watch?v=Le_Oj1KcWNU",
+      "published": "2026-10-19T01:53:13+00:00"
     },
     "storeCategory": "Utilities",
     "searchKeywords": "簡單換算 179 種單位換算、Base 2–64 進制轉換、IEEE 754 及 Base64 編解碼，支援漫畫分享卡。 實用工具",
@@ -1452,8 +1470,9 @@
     "category": "語言與兒童學習",
     "screenshots": [],
     "video": {
-      "title": "小英伴 — App 示範",
-      "url": "https://youtube.com/shorts/nnh1XfvTt3c"
+      "title": "小英伴 Little English #smartphone #shein #chatgpt #分享 #pets",
+      "url": "https://www.youtube.com/watch?v=nnh1XfvTt3c",
+      "published": "2026-10-18T17:21:53+00:00"
     },
     "storeCategory": "Education",
     "searchKeywords": "小英伴 為孩子準備 ABC、Phonics、詞彙、互動遊戲、英文繪本及英語探索地圖，附家長學習進度。 語言與兒童學習",
@@ -1530,11 +1549,11 @@
       "apple": "https://apps.apple.com/hk/app/coffeemate/id6826824850?uo=4"
     },
     "screenshots": [],
-    "version": "2.1",
+    "version": "2.2",
     "storeCategory": "Lifestyle",
     "storeName": "CoffeeMate",
-    "appleArtwork": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a0/fd/83/a0fd83ba-9834-5dd6-414e-3ecb8c686439/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
-    "updated": "2026-11-13",
+    "appleArtwork": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/13/ad/be/13adbeaa-9441-e1be-cc77-81bfc40279ee/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+    "updated": "2026-11-16",
     "appleScreenshots": [
       "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/79/0c/20/790c202c-b6c7-9d9b-5bf4-a4f3d3cb8c24/Screenshot_iPhone_17_25-10-2026_at_8.23.21_U202fPM.png/320x480bb.jpg",
       "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/74/b0/fc/74b0fc99-80d7-9dfe-0414-5cc380ff18b1/Screenshot_iPhone_17_25-10-2026_at_8.23.23_U202fPM.png/320x480bb.jpg",
@@ -1545,6 +1564,6 @@
       "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/c8/85/f7/c885f752-895a-0207-0f1e-5faf3c827b79/Screenshot_iPhone_17_25-10-2026_at_8.23.52_U202fPM.png/320x480bb.jpg",
       "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/2f/aa/60/2faa6004-301e-0dd3-dccf-949f8afe4404/Screenshot_iPhone_17_25-10-2026_at_8.23.57_U202fPM.png/320x480bb.jpg"
     ],
-    "releaseNotes": "優化AI功能"
+    "releaseNotes": "倒了杯咖啡"
   }
 ]
