@@ -1476,10 +1476,10 @@
     },
     "storeCategory": "Education",
     "searchKeywords": "小英伴 為孩子準備 ABC、Phonics、詞彙、互動遊戲、英文繪本及英語探索地圖，附家長學習進度。 語言與兒童學習",
-    "version": "1.1",
-    "storeName": "小英伴",
-    "appleArtwork": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/6a/38/b7/6a38b7bd-9999-21ba-bde5-0bf9941da6a3/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
-    "updated": "2026-10-21",
+    "version": "1.2",
+    "storeName": "學英文",
+    "appleArtwork": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/38/4c/91/384c91e6-aa86-1ace-1aa0-4e9bc5af0b54/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+    "updated": "2026-11-19",
     "appleScreenshots": [
       "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/00/5a/aa/005aaa1e-4534-bffc-b257-bd70b0383afe/Screenshot_iPhone_17_18-10-2026_at_10.39.25_U202fPM.png/320x480bb.jpg",
       "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/b3/33/7c/b3337ce4-f50b-2e83-242d-169012e62a01/Screenshot_iPhone_17_18-10-2026_at_10.39.28_U202fPM.png/320x480bb.jpg",
@@ -1489,7 +1489,8 @@
       "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/76/d0/9d/76d09da0-aeef-fd11-da38-72f83ca8061c/Screenshot_iPhone_17_18-10-2026_at_10.40.24_U202fPM.png/320x480bb.jpg",
       "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/3c/56/52/3c565238-5f24-ba40-abee-5534c5187ebd/Screenshot_iPhone_17_18-10-2026_at_10.40.27_U202fPM.png/320x480bb.jpg",
       "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/1b/2f/27/1b2f2778-b016-8f94-2035-1ba28a49e12d/Screenshot_iPhone_17_18-10-2026_at_10.40.37_U202fPM.png/320x480bb.jpg"
-    ]
+    ],
+    "releaseNotes": "新增題目"
   },
   {
     "id": "app-51",
