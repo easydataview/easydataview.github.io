@@ -6,15 +6,24 @@ on:
       - 'docs/**'
       - '.github/workflows/deploy-pages.yml'
   workflow_dispatch:
+  workflow_run:
+    workflows: [Refresh Apple Store and YouTube Catalog]
+    branches: [main]
+    types: [completed]
 permissions:
   contents: read
   pages: write
   id-token: write
-concurrency:
-  group: github-pages
-  cancel-in-progress: true
 jobs:
   deploy:
+    if: >-
+      github.event_name != 'workflow_run' ||
+      (github.event.workflow_run.conclusion == 'success' &&
+       github.event.workflow_run.head_branch == 'main' &&
+       github.event.workflow_run.head_repository.full_name == github.repository)
+    concurrency:
+      group: github-pages
+      cancel-in-progress: true
     runs-on: ubuntu-latest
     environment:
       name: github-pages
