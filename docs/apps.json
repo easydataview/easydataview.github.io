@@ -1591,5 +1591,28 @@
       "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/16/d9/f5/16d9f5cf-c116-8692-1a74-93f44b74626c/Screenshot_iPhone_17_12-11-2026_at_12.09.33_U202fAM.png/320x480bb.jpg",
       "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/fe/d8/e1/fed8e12d-41a7-b3c6-c8c3-6551b4a59b71/Screenshot_iPhone_17_12-11-2026_at_12.09.47_U202fAM.png/320x480bb.jpg"
     ]
+  },
+  {
+    "id": "app-55",
+    "name": "小電腦",
+    "description": "小電腦是一款適用於 iPhone 和 iPad 的 Little Man Computer 模擬器，讓你親手編寫程式，並看見 CPU 如何取指、解碼和執行。 從「兩數相加」範例開始，組譯程式、輸入兩個數字，然後核對輸出。想知道結果是怎樣算出來的？按「單步」執行一條指令，或按「週期」觀察一次資料傳輸。運作圖會以顏色和動畫標示資料從哪裡出發、",
+    "category": "語言與兒童學習",
+    "links": {
+      "apple": "https://apps.apple.com/hk/app/%E5%B0%8F%E9%9B%BB%E8%85%A6/id6832276135?uo=4"
+    },
+    "screenshots": [],
+    "version": "1.2",
+    "storeCategory": "Education",
+    "storeName": "小電腦",
+    "appleArtwork": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/97/88/30/97883090-e334-ea5c-84f8-01d4c797838c/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+    "updated": "2026-11-22",
+    "appleScreenshots": [
+      "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/82/cc/6b/82cc6b35-536b-abc6-8be7-517dc2271bce/Screenshot_iPhone_17_09-11-2026_at_12.12.54_U202fAM.png/320x480bb.jpg",
+      "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/da/20/e5/da20e5fc-aa36-5e1d-9a48-97a53c873cee/Screenshot_iPhone_17_09-11-2026_at_12.12.55_U202fAM.png/320x480bb.jpg",
+      "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/02/b3/7b/02b37b1b-ad94-e4a9-c953-50cefe980f2a/Screenshot_iPhone_17_09-11-2026_at_12.13.01_U202fAM.png/320x480bb.jpg",
+      "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/d0/18/bf/d018bf0d-ec05-df74-cc3e-0f3d10b15af6/Screenshot_iPhone_17_09-11-2026_at_12.13.03_U202fAM.png/320x480bb.jpg",
+      "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/c2/55/27/c255275e-851a-ff7f-42ea-e08b3e6bba77/Screenshot_iPhone_17_09-11-2026_at_12.13.06_U202fAM.png/320x480bb.jpg",
+      "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f9/26/ac/f926ac8d-3778-4584-ff3d-4a3e5ba574b4/Screenshot_iPhone_17_09-11-2026_at_12.13.18_U202fAM.png/320x480bb.jpg"
+    ]
   }
 ]
